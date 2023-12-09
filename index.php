@@ -8,7 +8,7 @@ $data_user_login=mysqli_fetch_array($q_data_user_login);
 function tampilkanNavbar($userInfo, $data_user_login) {
     if (!empty($userInfo)) { ?> <!-- Jika Ada -->
         <div class="user-info">
-            <button id="logoutBtn" class="bg-blue-700 text-white px-2 py-1 lg:px-5 lg:py-2 rounded-lg bg-blue-500 hover:bg-blue-300 active:border-none">
+            <button id="logoutBtn" class="bg-[#0088CC] border-2 border-white text-white px-2 py-1 lg:px-5 lg:py-2 rounded-lg hover:bg-blue-500 ">
             <?php 
                 // Menampilkan nama user ke dalam button
                 $fullName = $data_user_login['name'];
@@ -20,7 +20,7 @@ function tampilkanNavbar($userInfo, $data_user_login) {
         </div>
     <?php } else { ?> <!-- Jika Tidak -->
         <form action="login.php">
-            <button type="submit" class="bg-[#a6c1ee] text-white px-2 py-1 lg:px-5 lg:py-2 rounded-lg bg-blue-500 hover:bg-blue-300">Masuk</button>
+            <button type="submit" class="bg-[#0088CC] border-2 border-white text-white px-2 py-1 lg:px-5 lg:py-2 rounded-lg hover:bg-blue-500">Masuk</button>
         </form>
     <?php }
 }
@@ -54,7 +54,7 @@ function tampilkanNavbar($userInfo, $data_user_login) {
 <body chrome-hide-address-bar class="font-[Poppins] bg-white">
     <!-- Navbar -->
     <header class="bg-[#0088CC] sticky top-0">
-        <nav class="flex justify-between items-center h-20 w-[75%] z-50 mx-auto" >
+        <nav class="flex justify-between items-center h-20 w-[85%] md:w-[80%] lg:w-[75%] z-50 mx-auto" >
             <div>
                 <h1><a class="text-white text-2xl font-bold" href="#">SekNdes</a></h1>
             </div>
@@ -96,18 +96,20 @@ function tampilkanNavbar($userInfo, $data_user_login) {
                     </div>
                 </div>
             </div>
-
     </header>
 
     <!-- Body -->
     <!-- Include Methode -->
-    <div class="body-content bg-white dark:bg-gray-900 z-1 dark:text-white top-20">
+    <div class="body-content bg-white dark:bg-gray-900 z-10 dark:text-white top-0">
             <?php
                 $page = isset($_GET['page']) ? $_GET['page'] : 'beranda';
                 switch ($page) {
                     case 'artikel': //jika klik link ke "?page=artikel"
                     include 'artikel.php'; //muat halaman artikel.php
                     break; // akhiri action
+                    case 'detail_artikel':
+                    include 'detail_artikel.php';
+                    break;
                     case 'profil':
                     include 'profil.php';
                     break;

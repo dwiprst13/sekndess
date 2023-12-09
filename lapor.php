@@ -33,7 +33,7 @@ if (isset($_POST["submit"])) {
 
 if(!empty($userInfo)){ ?>
     <body class=" w-[80%] h-screen">
-        <div class="flex text-center text-sm md:text-base w-[80%] mx-auto text-white h-40 text-lg ">
+        <div class="flex text-center text-sm md:text-base w-[80%] mx-auto text-gray-900 dark:text-white h-40 text-base ">
             <div class="place-self-center mx-auto">
                 <p>Hallo <span class="text-blue-500"><?php echo $data_user_login['name']; ?></span>, punya keluhan apa?</p>
                 <p>Jangan ragu ragu untuk menyampaikan ke kita ya</p>
@@ -41,26 +41,26 @@ if(!empty($userInfo)){ ?>
         </div>
         <form class="w-[80%] space-y-6 mx-auto text-white pb-32" action="" method="POST" enctype="multipart/form-data" autocomplete="off">
             <div class="mx-auto w-[100%] md:w-[75%] lg:w-[55%]">
-                <label for="judul" class="block text-sm text-white font-medium leading-6 ">Judul</label>
+                <label for="judul" class="block text-sm text-gray-900 dark:text-white font-medium leading-6 ">Judul</label>
                 <div class="mt-2">
                     <input id="judul" name="judul" type="text" autocomplete="off" placeholder="Judul" value="<?php echo $judul ?>" required class="block w-[100%]  rounded-md border-0 py-1.5 text-gray-900 white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
             <div class="mx-auto w-[100%] md:w-[75%] lg:w-[55%]">
-                <label for="keluhan" class="block text-sm text-white font-medium leading-6 ">Keluhan</label>
+                <label for="keluhan" class="block text-sm text-gray-900 dark:text-white font-medium leading-6 ">Keluhan</label>
                 <div class="mt-2">
                     <textarea id="keluhan" name="keluhan" rows="4" cols="50" type="text" placeholder="Detail keluhan" autocomplete="off" required class="block w-[100%] rounded-md border-0 py-1.5 text-gray-900 white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"><?php echo $keluhan ?></textarea>
                     
                 </div>
             </div>
             <div class="mx-auto w-[100%] md:w-[75%] lg:w-[55%]">
-                <label for="wilayah" class="block text-sm text-white font-medium leading-6 ">Wilayah</label>
+                <label for="wilayah" class="block text-sm text-gray-900 dark:text-white font-medium leading-6 ">Wilayah</label>
                 <div class="mt-2">
                     <input id="wilayah" name="wilayah" type="text" autocomplete="off" placeholder="Wilayah" required class="block w-[100%] rounded-md border-0 py-1.5 text-gray-900 white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
             <div class="mx-auto w-[100%] md:w-[75%] lg:w-[55%]">
-                <label for="foto" class="block text-sm text-white font-medium leading-6 ">Media</label>
+                <label for="foto" class="block text-sm text-gray-900 dark:text-white font-medium leading-6 ">Media</label>
                 <div class="mt-2">
                     <input id="foto" name="foto" type="file" autocomplete="" multiple onchange="readURL(this)" required accept="image/*" class=" block w-[100%] p-5 file:mr-4 file:py-1  file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-violet-100 file:cursor-pointer rounded-md border-0 py-1.5 white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
