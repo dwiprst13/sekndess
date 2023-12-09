@@ -74,10 +74,15 @@
             </div>                
         </div>
     </section>
+    <section class="w-[100%] md:w-[85%] lg:w-[80%] mx-auto">
+        <div class="container flex text-black mx-auto px-4 py-16 gap-8 w-[90%] md:w-[85%] lg:w-[80%]">
+            <p id="jadwal">test</p>
+        </div>
+    </section>
     <!-- Visi & Misi -->
     <section id="visi-misi" class="wow bounceInUp w-[100%] md:w-[85%] lg:w-[80%] mx-auto" >
-        <div class="container  grid mx-auto text-center ">
-            <h1 class="text-2xl font-bold ">VISI & MISI</h1>
+        <div class="container grid mx-auto text-center ">
+            <h1 class="text-2xl text-black font-bold ">VISI & MISI</h1>
         </div>
         <div class="container text-white flex grid mx-auto px-4 py-16 gap-8 w-[90%] md:w-[85%] lg:w-[80%] lg:grid-cols-12">
             <div class="visi p-5 lg:col-span-6 bg-[#0088CC]  rounded-lg" >
@@ -150,7 +155,7 @@
     <!-- Galeri -->
     <section class="w-[100%] md:w-[85%] lg:w-[80%] mx-auto">
         <div class="container grid mx-auto text-center">
-            <h1 class="text-2xl text-black  font-bold ">GALERI</h1>
+            <h1 class="text-2xl text-black font-bold ">GALERI</h1>
         </div>
         <div class="container grid mx-auto px-4 py-16 w-[90%] md:w-[85%] lg:w-[80%] md:grid-cols-8 lg:grid-cols-12 gap-8">
             <?php 
@@ -363,16 +368,16 @@
                 <h4 class="text-3xl py-5 md:py-2 fonat-semibold text-center md:text-left text-white">Pemerintah Desa Wijimulyo</h4>
                 <h5 class="text-lg mt-0 py-5 md:py-2 text-center md:text-left text-white">Ikuti Kami di Media Sosial</h5>
                 <div class="mt-6 flex justify-center md:justify-start lg:mb-0 mb-6">
-                    <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                    <button onclick="window.location.href='https://www.twitter.com'" class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                         <i class="fab fa-twitter"></i>
                     </button>
-                    <button class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                    <button onclick="window.location.href='https://www.facebook.com/profile.php?id=100049707712124'" class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                         <i class="fab fa-facebook-square"></i>
                     </button>
-                    <button class="bg-white text-green-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                    <button onclick="window.location.href='https://wa.me/6285229992286'" class="bg-white text-green-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                         <i class="fab fa-whatsapp"></i>
                     </button>
-                    <button class="bg-white text-pink-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                    <button onclick="window.location.href='https://www.instagram.com/prastttt13'" class="bg-white text-pink-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                         <i class="fab fa-instagram"></i>
                     </button>
                 </div>
@@ -395,5 +400,43 @@
             </div>
         </div>
     </footer>
+    <script>
+        function checkSchedule() {
+            const today = new Date();
+            const dayOfWeek = today.getDay();
+            const currentHour = today.getHours();
+            const currentMinutes = today.getMinutes();
+
+            let isOpen = false;
+            let message = "";
+
+            if (dayOfWeek >= 1 && dayOfWeek <= 5) {
+                if (
+                (currentHour > 7 || (currentHour === 7 && currentMinutes >= 30)) &&
+                currentHour < 14
+                ) {
+                isOpen = true;
+                }
+            } else if (dayOfWeek === 6) {
+                if (currentHour === 7 && currentMinutes >= 0 && currentHour < 12) {
+                isOpen = true;
+                }
+            }
+            if (isOpen) {
+                message = "Buka";
+            } else {
+                message = "Tutup";
+            }
+            document.getElementById("jadwal").innerText = `Hari ini: ${getDayName(
+                dayOfWeek
+            )} - ${message}`;
+            }
+        function getDayName(day) {
+            const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+            return days[day];
+            }
+
+        checkSchedule();
+    </script>
 
     

@@ -8,7 +8,7 @@ $data_user_login=mysqli_fetch_array($q_data_user_login);
 function tampilkanNavbar($userInfo, $data_user_login) {
     if (!empty($userInfo)) { ?> <!-- Jika Ada -->
         <div class="user-info">
-            <button id="logoutBtn" class="bg-[#0088CC] border-2 border-white text-white px-2 py-1 lg:px-5 lg:py-2 rounded-lg hover:bg-blue-500 ">
+            <button id="logoutBtn" class="bg-[#0088CC] text-sm md:text-base border-2 border-white text-white px-2 py-1 lg:px-5 lg:py-2 rounded-lg hover:bg-blue-500 ">
             <?php 
                 // Menampilkan nama user ke dalam button
                 $fullName = $data_user_login['name'];
@@ -20,7 +20,7 @@ function tampilkanNavbar($userInfo, $data_user_login) {
         </div>
     <?php } else { ?> <!-- Jika Tidak -->
         <form action="login.php">
-            <button type="submit" class="bg-[#0088CC] border-2 border-white text-white px-2 py-1 lg:px-5 lg:py-2 rounded-lg hover:bg-blue-500">Masuk</button>
+            <button type="submit" class="bg-[#0088CC] text-sm md:text-base border-2 border-white text-white px-2 py-1 lg:px-5 lg:py-2 rounded-lg hover:bg-blue-500">Masuk</button>
         </form>
     <?php }
 }
@@ -60,7 +60,7 @@ function tampilkanNavbar($userInfo, $data_user_login) {
             </div>
             <div
                 class="nav-links duration-500 bg-[#0088CC] lg:static absolute lg:min-h-fit min-h-[60vh] left-0 top-[-800%] lg:w-auto text-white w-full flex items-center px-5">
-                <ul class="flex bg-[#0088CC] lg:flex-row flex-col lg:items-center lg:gap-[4vw] gap-8">
+                <ul class="flex bg-[#0088CC] text-sm md:text-base lg:flex-row flex-col lg:items-center lg:gap-[4vw] gap-8">
                     <li>
                         <a class="text-white hover:text-gray-500" href="?page=beranda">Beranda</a>
                     </li>
