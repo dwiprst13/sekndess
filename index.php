@@ -100,7 +100,7 @@ function tampilkanNavbar($userInfo, $data_user_login) {
 
     <!-- Body -->
     <!-- Include Methode -->
-    <div class="body-content bg-white dark:bg-gray-900 z-10 dark:text-white top-0">
+    <div class="body-content bg-white z-10 dark:text-white top-0">
             <?php
                 $page = isset($_GET['page']) ? $_GET['page'] : 'beranda';
                 switch ($page) {

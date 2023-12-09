@@ -12,7 +12,7 @@ Whats used in here?
 4. Lapor
 5. Informasi
 6. Login dan Daftar akun
-7. Admin Page => in progress
+7. Admin Page 
 
 
 Secara default web ini membuka index.php, untuk konten akan dimuat didalam index.php dengan metode include.
