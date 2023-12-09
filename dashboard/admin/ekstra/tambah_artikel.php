@@ -75,6 +75,7 @@ if (isset($_POST["submit"])) {
             </div>
         </form>
         <script>
+            // CKEDITOR.replace('isi');
             function readURL(input) {
             var img = document.querySelector("#img");
             if (input.files && input.files[0]) {
