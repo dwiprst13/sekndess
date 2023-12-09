@@ -1,0 +1,20 @@
+SEKNDES
+Web Desa dengan tailwind dan php sederhana
+
+Whats used in here?
+1. Framework Tailwind
+2. mysql database 
+
+This website adopted SPA schema (Single Page Application) but still isn't.
+
+### Fitur yang ada di website ini:
+1. Beranda
+2. Galeri
+3. Artikel
+4. Lapor
+5. Informasi
+6. Login dan Daftar akun
+7. Admin Page => in progress
+
+# File di folder root merupakan asset yang diakses user
+# Untuk admin berada di folder dashboard/admin
