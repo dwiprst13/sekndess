@@ -22,7 +22,6 @@ if (isset($_POST["submit"])) {
 <head>
     <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 </head>
-<body class="flex">
     <header class="bg-gray-900 w-[100%] sticky left-0 top-0">
         <nav class="h-16 w-[100%] flex mx-auto " >
             <div class="place-self-center flex gap-1 p-5">
@@ -31,18 +30,18 @@ if (isset($_POST["submit"])) {
             </div>
         </nav>
     </header>
-    <body class=" w-[80%] h-screen">
-        <div class="flex text-sm md:text-base h-24 w-[90%] mx-auto text-lg ">
-            <div class="place-self-center">
-                <p>Tambah Artikel</p>
-            </div>
-            <div>
-                <button class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">
-                    <a href="?page=user">Kembali</a>
-                </button>
-            </div>
+    <div class="p-4 flex">
+        <h1 class="text-xl">
+            Tambah Artikel
+        </h1>
+    </div>
+    <div class=" px-3 py-4 flex flex-col justify-between">
+        <div>
+            <button class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">
+                <a href="?page=artikel">Kembali</a>
+            </button>
         </div>
-        <form class="w-[90%] flex flex-col mx-auto pb-32" action="" method="POST" enctype="multipart/form-data" autocomplete="off">
+        <form class="w-[90%] flex flex-col mx-auto pt-10 pb-32" action="" method="POST" enctype="multipart/form-data" autocomplete="off">
             <div class="grid grid-cols-12">
                 <div class="col-span-5 p-3 space-y-6 ">
                     <div class="mx-auto w-[100%]">

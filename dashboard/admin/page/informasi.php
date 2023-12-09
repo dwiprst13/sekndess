@@ -19,8 +19,15 @@ if (isset($_GET['page']) && $_GET['page'] == 'edit_informasi') {
             </div>
         </nav>
     </header>
-    <a href="?page=tambah_informasi">Tambah</a>
-
+    <div class="keuangan">
+        <h1>Ini Bagian Keuangan</h1>
+    </div>
+    <div class="info">
+        <h1>Ini Bagian Informasi</h1>
+    </div>
+    <div class="agenda">
+        <h1>Ini Bagian Agenda</h1>
+    </div>
 </body>
 </html>
 <?php

@@ -8,7 +8,7 @@ $data_user_login=mysqli_fetch_array($q_data_user_login);
 function tampilkanNavbar($userInfo, $data_user_login) {
     if (!empty($userInfo)) { ?> <!-- Jika Ada -->
         <div class="user-info">
-            <button id="logoutBtn" class="bg-[#a6c1ee] text-white px-2 py-1 lg:px-5 lg:py-2 rounded-lg bg-blue-500 hover:bg-blue-300 active:border-none">
+            <button id="logoutBtn" class="bg-blue-700 text-white px-2 py-1 lg:px-5 lg:py-2 rounded-lg bg-blue-500 hover:bg-blue-300 active:border-none">
             <?php 
                 // Menampilkan nama user ke dalam button
                 $fullName = $data_user_login['name'];
@@ -53,14 +53,14 @@ function tampilkanNavbar($userInfo, $data_user_login) {
 
 <body chrome-hide-address-bar class="font-[Poppins] bg-white">
     <!-- Navbar -->
-    <header class="bg-blue-700 sticky top-0">
+    <header class="bg-[#0088CC] sticky top-0">
         <nav class="flex justify-between items-center h-20 w-[75%] z-50 mx-auto" >
             <div>
                 <h1><a class="text-white text-2xl font-bold" href="#">SekNdes</a></h1>
             </div>
             <div
-                class="nav-links duration-500 bg-blue-700 lg:static absolute lg:min-h-fit min-h-[60vh] left-0 top-[-800%] lg:w-auto text-white w-full flex items-center px-5">
-                <ul class="flex bg-blue-700 lg:flex-row flex-col lg:items-center lg:gap-[4vw] gap-8">
+                class="nav-links duration-500 bg-[#0088CC] lg:static absolute lg:min-h-fit min-h-[60vh] left-0 top-[-800%] lg:w-auto text-white w-full flex items-center px-5">
+                <ul class="flex bg-[#0088CC] lg:flex-row flex-col lg:items-center lg:gap-[4vw] gap-8">
                     <li>
                         <a class="text-white hover:text-gray-500" href="?page=beranda">Beranda</a>
                     </li>
