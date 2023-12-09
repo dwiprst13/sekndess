@@ -105,31 +105,31 @@ function tampilkanNavbar($userInfo, $data_user_login) {
                 $page = isset($_GET['page']) ? $_GET['page'] : 'beranda';
                 switch ($page) {
                     case 'artikel': //jika klik link ke "?page=artikel"
-                    include 'artikel.php'; //muat halaman artikel.php
+                    include 'user/artikel.php'; //muat halaman artikel.php
                     break; // akhiri action
                     case 'detail_artikel':
-                    include 'detail_artikel.php';
+                    include 'pages/detail_artikel.php';
                     break;
                     case 'profil':
-                    include 'profil.php';
+                    include 'user/profil.php';
                     break;
                     case 'pemerintahan':
-                    include 'pemerintahan.php';
+                    include 'user/pemerintahan.php';
                     break;
                     case 'informasi':
-                    include 'informasi.php';
+                    include 'user/informasi.php';
                     break;
                     case 'galeri':
-                    include 'galeri.php';
+                    include 'user/galeri.php';
                     break;
                     case 'detail_galeri':
                     include 'pages/detail_galeri.php';
                     break;
                     case 'lapor':
-                    include 'lapor.php';
+                    include 'user/lapor.php';
                     break;
                     default:
-                    include 'beranda.php';
+                    include 'user/beranda.php';
                     break;
                 }
             ?>

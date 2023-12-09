@@ -5,8 +5,6 @@ Whats used in here?
 1. Framework Tailwind
 2. mysql database 
 
-This website adopted SPA schema (Single Page Application) but still isn't.
-
 ### Fitur yang ada di website ini:
 1. Beranda
 2. Galeri
@@ -16,5 +14,23 @@ This website adopted SPA schema (Single Page Application) but still isn't.
 6. Login dan Daftar akun
 7. Admin Page => in progress
 
-# File di folder root merupakan asset yang diakses user
-# Untuk admin berada di folder dashboard/admin
+
+Secara default web ini membuka index.php, untuk konten akan dimuat didalam index.php dengan metode include.
+Contoh:
+    case 'profil':
+    include 'user/profil.php';
+Maksud dari case pada kode PHP tersebut adalah untuk melakukan pemilihan berdasarkan nilai dari variabel page.
+Kode tersebut akan memeriksa nilai dari variabel page. Jika nilainya sama dengan 'profil' maka kode tersebut akan memuat halaman user/artikel.php
+
+# Folder root/asset menyimpan media utama website ini
+# Folder root/dashboard terdapat 2 folder:
+    1. admin
+        - ekstra menyimpan halaman aksi aksi yg dilakukan admin
+        - modals
+        - page menyimpan halaman konten
+        - index.php
+    2. assets
+        menyimpan aset untuk halaman admin
+# Folder root/pages menyimpan halaman tambahan yang mendukung tampilan tambahan dari sisi user / visitor
+# Folder root/uploads menyimpan media yang diupload ke web
+# Folder root/user menyimpan halaman yang mendukung tampilan utama dari sisi user / visitor
