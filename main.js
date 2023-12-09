@@ -21,7 +21,7 @@ const navLinks = document.querySelector('.nav-links')
             if (event.target.id === 'cancelLogout') {
                 modal.style.display = 'none';
             } else if (event.target.id === 'confirmLogout') {
-                window.location.href = 'user/logout.php';
+                window.location.href = 'logout.php';
             }
         });
 // SIDE NAVIGATION
