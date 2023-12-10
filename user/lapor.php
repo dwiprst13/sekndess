@@ -92,7 +92,11 @@ if(!empty($userInfo)){ ?>
     </body>
 <?php }
 else { 
-    header("Location: login.php");
+    ?>
+    <script>
+        window.location.href = "login.php";
+    </script>
+    <?php
 } ?>
 
 
