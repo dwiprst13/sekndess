@@ -22,7 +22,7 @@ if (isset($_POST["submit"])) {
     if ($conn->query($sql) === TRUE) {
         unset($_SESSION['judul']); //Membersihkan sesi judul
         unset($_SESSION['keluhan']);
-        header("Location: ?page=lapor");
+        echo '<script>window.location.href = "?page=lapor"</script>';
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
         echo "<pre>";

@@ -15,11 +15,11 @@ $queryArtikel = mysqli_query($conn, "SELECT * FROM artikel WHERE status = 'publi
                 $path_baru = str_replace('../../', '', $path_relatif);
                 ?>
                     <a href="?page=detail_artikel" class="items-center bg-white border border-gray-200 rounded-lg col-span-6 md:col-span-8 lg:col-span-6 hover:scale-105 duration-500">
-                        <div class="flex p-2 lg:p-4 grid grid-cols-8 md:grid-cols-10 lg:grid-cols-12 ">
-                            <img class="object-fill col-span-3 md:col-span-4 lg:col-span-5 flex flex-wrap w-full h-32 md:h-48 md:rounded-s-lg" src="<?= $path_baru ?>"  alt="">
+                        <div class="flex p-1 lg:p-2 grid grid-cols-8 md:grid-cols-10 lg:grid-cols-12 ">
+                            <img class="object-fill my-auto col-span-3 md:col-span-4 lg:col-span-5 flex flex-wrap w-full h-24 md:rounded-s-lg" src="<?= $path_baru ?>"  alt="">
                             <div class="flex col-span-5 md:col-span-6 lg:col-span-7 flex-col justify-between p-4 leading-normal">
-                                <h5 class="mb-2 flex-wrap md:text-xl lg:text-2xl font-bold tracking-tight text-gray-900 "><?= $row_artikel['judul'] ?></h5>
-                                <p class=" flex-wrap text-base md:text-lg font-normal text-gray-700 dark:text-gray-400 line-clamp-3"><?= $row_artikel['content'] ?></p>
+                                <h5 class="mb-1 flex-wrap md:text-base lg:text-lg font-bold tracking-tight text-gray-900 "><?= $row_artikel['judul'] ?></h5>
+                                <p class=" flex-wrap text-base text-sm font-normal text-gray-700 dark:text-gray-400 line-clamp-3"><?= $row_artikel['content'] ?></p>
                             </div>
                         </div>
                     </a>
