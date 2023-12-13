@@ -37,7 +37,6 @@ function tampilkanNavbar($userInfo, $data_user_login) {
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
     <!-- My Asset -->
-    <script src="main.js" defer></script>
     <link rel="stylesheet" href="main.css">
     <!-- Gambar Tab -->
     <link rel="icon" type="image/x-icon" href="asset/pemerintah/gambar6.jpg">
@@ -139,7 +138,7 @@ function tampilkanNavbar($userInfo, $data_user_login) {
     </header>
 
     <!-- Body -->
-    <div class="body-content bg-white z-10 dark:text-white top-0">
+    <div class="body-content bg-white z-10  top-0">
             <?php
                 $page = isset($_GET['page']) ? $_GET['page'] : 'beranda';
                 switch ($page) {
@@ -221,10 +220,8 @@ function tampilkanNavbar($userInfo, $data_user_login) {
                     }
                 });
             });
-
             document.addEventListener("DOMContentLoaded", function() {
                 const loginButton = document.getElementById("loginBtn");
-
                 loginButton.addEventListener("click", function() {
                     window.location.href = "login.php";
                 });
@@ -232,7 +229,8 @@ function tampilkanNavbar($userInfo, $data_user_login) {
 
 
         </script>
-
+    
+    <script src="main.js" ></script>
 </body>
 
 </html>

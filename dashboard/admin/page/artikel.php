@@ -75,9 +75,9 @@ if (isset($_GET['page']) && $_GET['page'] == 'edit_artikel') {
         </div>
     </section>
     <script>
-        var content = document.getElementById('contentToLimit');
-        var limitedContent = content.innerText.substring(0, 200);
-        content.innerText = limitedContent;
+        // var content = document.getElementById('contentToLimit');
+        // var limitedContent = content.innerText.substring(0, 200);
+        // content.innerText = limitedContent;
     </script>
 </body>
 </html>

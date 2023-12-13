@@ -1,5 +1,4 @@
 <?php 
-$artikel = "SELECT * FROM artikel ORDER BY id_artikel DESC LIMIT 3";
 $queryArtikel = mysqli_query($conn, "SELECT * FROM artikel WHERE status = 'publish'");
 ?>
 

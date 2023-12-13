@@ -18,7 +18,7 @@
                     $path_relatif = $row_galeri['documentasi'];
                     $path_baru = str_replace('../../', '', $path_relatif);
                     ?>
-                    <a href="?page=detail_galeri&id_doc=<?= $row_galeri['id_doc'] ?>" class="card-galeri p-2 bg-[#0088CC] w-[100%] text-white md:col-span-4 lg:col-span-4 rounded-lg lg:hover:bg-blue-600 lg:hover:scale-105 ease-in duration-500">
+                    <a href="?page=detail_galeri&id_doc=<?= $row_galeri['id_doc'] ?>" class="card-galeri p-2 bg-[#0088CC] w-[100%] text-white md:col-span-4 lg:col-span-4 rounded-lg lg:hover:bg-blue-600 ease-in duration-500">
                         <h1 class="text-center pt-3 text-lg"><b><?= $row_galeri['judul'] ?></b></h1>
                         <img src="<?= $path_baru?> " alt="" class="h-48 pt-3 w-[100%]">
                         <p class="text-center text-sm pt-3 line-clamp-3"><?= $row_galeri['deskripsi'] ?></p>
