@@ -17,9 +17,9 @@
             </div>
             <div class="lg:col-span-7 h-min-full bg-blue-600 rounded-lg">
                 <iframe id="if_berita" src="user/informasi_ext/info_berita.php" frameborder="0" class="w-[100%] h-screen"></iframe>
-                <iframe id="if_agenda" src="user/informasi_ext/info_agenda.php" frameborder="0" class="w-[100%]"></iframe>
-                <iframe id="if_pengumuman" src="user/informasi_ext/info_pengumuman.php" frameborder="0" class="w-[100%]"></iframe>
-                <iframe id="if_pelayanan" src="user/informasi_ext/info_pelayanan.php" frameborder="0" class="w-[100%]"></iframe>
+                <iframe id="if_agenda" src="user/informasi_ext/info_agenda.php" frameborder="0" class="w-[100%] h-screen"></iframe>
+                <iframe id="if_pengumuman" src="user/informasi_ext/info_pengumuman.php" frameborder="0" class="w-[100%] h-screen"></iframe>
+                <iframe id="if_pelayanan" src="user/informasi_ext/info_pelayanan.php" frameborder="0" class="w-[100%] h-screen"></iframe>
             </div>
             <div class="hidden lg:block lg:col-span-3 bg-green-600 rounded-lg">
                 <iframe id="if_rec_berita" src="user/informasi_ext/info_rec_berita.php" frameborder="0" class="w-[100%]"></iframe>
@@ -47,6 +47,7 @@
     const ifRecPengumuman = document.getElementById('if_rec_pengumuman');
     const ifRecPelayanan = document.getElementById('if_rec_pelayanan');
     
+
     function tampilBerita() {
         ifAgenda.style.display = 'none';
         ifPengumuman.style.display = 'none';

@@ -74,9 +74,12 @@
             </div>                
         </div>
     </section>
-    <section class="w-[100%] md:w-[85%] lg:w-[80%] mx-auto">
-        <div class="container flex text-black mx-auto px-4 py-16 gap-8 w-[90%] md:w-[85%] lg:w-[80%]">
-            <p id="jadwal">test</p>
+    <!-- Jadwal Buka -->
+    <section class="w-[100%] md:w-[85%] lg:w-[80%] justify-item-center grid grid-cols-12">
+        <div class="container flex flex-col lg:col-span-6 rounded-lg bg-[#0088CC] text-center text-white px-4 py-16 gap-8 w-[45%] md:w-[40%] lg:w-[80%]">
+            <p class="text-base">Jadwal Buka</p>
+            <p class="text-base">Sekarang Hari <span id="hari"></span></p>
+            <p class="text-base">Pelayanan <span id="status"></span></p>
         </div>
     </section>
     <!-- Visi & Misi -->
@@ -96,7 +99,7 @@
         </div>
     </section>
     <!-- Artikel -->
-    <section class=" w-[100%]  md:w-[85%] lg:w-[80%] mx-auto ">
+    <section class=" w-[100%] md:w-[85%] lg:w-[80%] mx-auto ">
         <div class="container grid mx-auto text-center ">
             <h1 class="text-2xl text-black font-bold ">ARTIKEL</h1>
         </div>
@@ -402,41 +405,39 @@
     </footer>
     <script>
         function checkSchedule() {
-            const today = new Date();
-            const dayOfWeek = today.getDay();
-            const currentHour = today.getHours();
-            const currentMinutes = today.getMinutes();
+    const today = new Date();
+    const dayOfWeek = today.getDay();
+    const currentHour = today.getHours();
+    const currentMinutes = today.getMinutes();
 
-            let isOpen = false;
-            let message = "";
+    let isOpen = false;
+    let message = "";
 
-            if (dayOfWeek >= 1 && dayOfWeek <= 5) {
-                if (
-                (currentHour > 7 || (currentHour === 7 && currentMinutes >= 30)) &&
-                currentHour < 14
-                ) {
-                isOpen = true;
-                }
-            } else if (dayOfWeek === 6) {
-                if (currentHour === 7 && currentMinutes >= 0 && currentHour < 12) {
-                isOpen = true;
-                }
-            }
-            if (isOpen) {
-                message = "Buka";
-            } else {
-                message = "Tutup";
-            }
-            document.getElementById("jadwal").innerText = `Hari ini: ${getDayName(
-                dayOfWeek
-            )} - ${message}`;
-            }
-        function getDayName(day) {
-            const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
-            return days[day];
-            }
+    if (dayOfWeek >= 1 && dayOfWeek <= 5) {
+        if ((currentHour > 7 || (currentHour === 7 && currentMinutes >= 30)) && currentHour < 14) {
+            isOpen = true;
+        }
+    } else if (dayOfWeek === 6) {
+        if (currentHour === 7 && currentMinutes >= 0 && currentHour < 12) {
+            isOpen = true;
+        }
+    }
+    if (isOpen) {
+        message = "Buka";
+    } else {
+        message = "Tutup";
+    }
+    document.getElementById("hari").innerText = getDayName(dayOfWeek);
+    document.getElementById("status").innerText = message;
+}
 
-        checkSchedule();
+function getDayName(day) {
+    const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+    return days[day];
+}
+
+checkSchedule();
+
     </script>
 
     
