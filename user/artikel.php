@@ -13,7 +13,7 @@ $queryArtikel = mysqli_query($conn, "SELECT * FROM artikel WHERE status = 'publi
                 $path_relatif = $row_artikel['gambar'];
                 $path_baru = str_replace('../../', '', $path_relatif);
                 ?>
-                    <a href="?page=detail_artikel" class="items-center bg-white border border-gray-200 rounded-lg col-span-6 md:col-span-8 lg:col-span-6 hover:scale-105 duration-500">
+                    <a href="?page=detail_artikel&id_artikel=<?= $row_artikel['id_artikel'] ?>" class="items-center bg-white border border-gray-200 rounded-lg col-span-6 md:col-span-8 lg:col-span-6 hover:scale-105 duration-500">
                         <div class="flex p-1 lg:p-2 grid grid-cols-8 md:grid-cols-10 lg:grid-cols-12 ">
                             <img class="object-fill my-auto col-span-3 md:col-span-4 lg:col-span-5 flex flex-wrap w-full h-24 md:rounded-s-lg" src="<?= $path_baru ?>"  alt="">
                             <div class="flex col-span-5 md:col-span-6 lg:col-span-7 flex-col justify-between p-4 leading-normal">

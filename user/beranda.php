@@ -75,13 +75,17 @@
         </div>
     </section>
     <!-- Jadwal Buka -->
-    <section class="w-[100%] md:w-[85%] lg:w-[80%] justify-item-center grid grid-cols-12">
-        <div class="container flex flex-col lg:col-span-6 rounded-lg bg-[#0088CC] text-center text-white px-4 py-16 gap-8 w-[45%] md:w-[40%] lg:w-[80%]">
-            <p class="text-base">Jadwal Buka</p>
-            <p class="text-base">Sekarang Hari <span id="hari"></span></p>
-            <p class="text-base">Pelayanan <span id="status"></span></p>
+    <!-- <section class="w-[100%] md:w-[85%] lg:w-[80%] ">
+        <div class="">
+            <div class="lg:col-span-3 bg-gray-200"></div>
+            <div class="lg:col-span-6">
+                <p class="text-base">Jadwal Buka</p>
+                <p class="text-base">Sekarang Hari <span id="hari"></span></p>
+                <p class="text-base">Pelayanan <span id="status"></span></p>
+            </div>
+            <div class="lg:col-span-3 bg-gray-200"></div>
         </div>
-    </section>
+    </section> -->
     <!-- Visi & Misi -->
     <section id="visi-misi" class="wow bounceInUp w-[100%] md:w-[85%] lg:w-[80%] mx-auto" >
         <div class="container grid mx-auto text-center ">
