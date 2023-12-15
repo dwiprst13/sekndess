@@ -66,6 +66,7 @@ $status = $row_artikel['status'];
                     <p class="text-sm">Artikel ini dipublikasikan pada <?= $row_artikel['date'] ?></p>
                 </div>
             </div>
+            
             <div class="col-span-2 h-48 flex flex-col justify-between gap-2 px-2 py-10 bg-white rounded-lg">
                 <h2 class="text-center font-bold">Tindakan</h2>
                 <form action="" method="get">

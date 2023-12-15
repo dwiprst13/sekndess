@@ -75,20 +75,19 @@
         </div>
     </section>
     <!-- Jadwal Buka -->
-    <!-- <section class="w-[100%] md:w-[85%] lg:w-[80%] ">
-        <div class="">
-            <div class="lg:col-span-3 bg-gray-200"></div>
-            <div class="lg:col-span-6">
-                <p class="text-base">Jadwal Buka</p>
-                <p class="text-base">Sekarang Hari <span id="hari"></span></p>
-                <p class="text-base">Pelayanan <span id="status"></span></p>
+    <section class="w-[100%] md:w-[85%] lg:w-[80%] mx-auto">
+        <div class=" mx-auto w-[90%] md:w-[85%] py-16 lg:w-[80%] justify-center">
+            <div class="p-5 w-[100%] bg-[#0088CC] rounded-lg text-center text-white">
+                <p class="text-xl p-3">Jadwal Buka</p>
+                <p class="text-base p-3">Sekarang Hari <span id="hari"></span></p>
+                <p class="text-base p-3">Pelayanan <span id="status"></span></p>
+                <p class="text-base p-3"> Hari ini kami buka pukul 07.00 - 14.00 WIB</p>
             </div>
-            <div class="lg:col-span-3 bg-gray-200"></div>
         </div>
-    </section> -->
+    </section>
     <!-- Visi & Misi -->
-    <section id="visi-misi" class="wow bounceInUp w-[100%] md:w-[85%] lg:w-[80%] mx-auto" >
-        <div class="container grid mx-auto text-center ">
+    <section id="visi-misi" class="w-[100%] md:w-[85%] lg:w-[80%] mx-auto" >
+        <div class="container grid mx-auto text-center">
             <h1 class="text-2xl text-black font-bold ">VISI & MISI</h1>
         </div>
         <div class="container text-white flex grid mx-auto px-4 py-16 gap-8 w-[90%] md:w-[85%] lg:w-[80%] lg:grid-cols-12">
