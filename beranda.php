@@ -118,7 +118,7 @@ Kami dengan bangga mempersembahkan platform daring ini sebagai pusat informasi d
                     $path_baru = str_replace('../../', '', $path_relatif);
                     ?>
                         <a href="?page=detail_artikel" class="card-galeri p-2 bg-[#0088CC] w-[100%] md:col-span-4 lg:col-span-4 rounded-lg lg:hover:bg-blue-600 lg:hover:scale-105 ease-in duration-500">
-                            <h1 class="text-center pt-3 text-lg"><?= $row_artikel['judul'] ?></h1>
+                            <h1 class="text-center pt-3 text-lg font-bold"><?= $row_artikel['judul'] ?></h1>
                             <img src="<?= $path_baru ?>" alt="" class="h-52 pt-3 w-28 w-full">
                             <p class="text-justify pt-3 line-clamp-3"><?= $row_artikel['content'] ?></p>
                         </a>

@@ -64,7 +64,7 @@ if (isset($_GET['page']) && $_GET['page'] == 'edit_artikel') {
             ?>
                 <a href="?page=detail_artikel&id_artikel=<?= $row_artikel['id_artikel'] ?>" class="card-galeri justify-center p-2 text-gray-900 md:col-span-3 lg:col-span-3 rounded-lg <?= $card_class ?>">
                     <h1 class="text-center pt-3 text-lg line-clamp-2"><b><?= $row_artikel['judul'] ?></b></h1>
-                    <img src="<?= $path_baru ?>" alt="" class="h-35 pt-3 w-[100%]">
+                    <img src="<?= $path_baru ?>" alt="" class="h-40 pt-3 w-[100%]">
                     <?php 
                     ?>
                     <p id="contentToLimit" class="text-justify text-sm pt-3 line-clamp-3"><?= html_entity_decode($row_artikel['content']) ?></p>

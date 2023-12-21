@@ -25,6 +25,7 @@ $queryArtikel = mysqli_query($conn, "SELECT * FROM artikel WHERE status = 'publi
             <?php
             }
             ?>
+
         </div>
     </section>
 </body>

@@ -7,14 +7,14 @@
     <title>Document</title>
 </head>
 
-<div class="w-[85%] mx-auto py-12 ">
+<div class="w-[95%] lg:w-[85%] mx-auto py-8 ">
     <div class="lg:grid lg:grid-cols-12 lg:gap-5">
-        <div class="flex lg:col-span-2 lg:flex lg:flex-col">
-            <div class="bg-white p-4 rounded shadow-md ">
-                <button id="in_berita" class="text-left bg-blue-500 hover:bg-gray-700 text-white font-bold p-1 w-full rounded my-2">Berita</button>
-                <button id="in_agenda" class="text-left bg-green-500 hover:bg-gray-700 text-white font-bold p-1 w-full rounded my-2">Agenda</button>
-                <button id="in_pengumuman" class="text-left bg-yellow-500 hover:bg-gray-700 text-white font-bold p-1 w-full rounded my-2">Pengumuman</button>
-                <button id="in_pelayanan" class="text-left bg-red-500 hover:bg-gray-700 text-white font-bold p-1 w-full rounded my-2">Pelayanan</button>
+        <div class="flex lg:col-span-2 lg:flex lg:flex-col my-5">
+            <div class="bg-white rounded shadow-md grid grid-cols-8 gap-1">
+                <button id="in_berita" class="text-center bg-blue-500 hover:bg-gray-700 text-white font-bold p-1 w-full rounded my-2 col-span-2">Berita</button>
+                <button id="in_agenda" class="text-center bg-green-500 hover:bg-gray-700 text-white font-bold p-1 w-full rounded my-2 col-span-2">Agenda</button>
+                <button id="in_pengumuman" class="text-center bg-yellow-500 hover:bg-gray-700 text-white font-bold p-1 w-full rounded my-2 col-span-2">Pengumuman</button>
+                <button id="in_pelayanan" class="text-center bg-red-500 hover:bg-gray-700 text-white font-bold p-1 w-full rounded my-2 col-span-2">Pelayanan</button>
             </div>
         </div>
 
@@ -29,7 +29,7 @@
         <div class="lg:col-span-7 h-min-full border border-solid border-gray-400 p-4 rounded-lg shadow-md" id="if_pengumuman">
             <iframe src="user/informasi_ext/info_pengumuman.php" frameborder="0" class="w-[100%] h-screen"></iframe>
         </div>
-        
+
         <div class="lg:col-span-7 h-min-full border border-solid border-gray-400 p-4 rounded-lg shadow-md" id="if_pelayanan">
             <iframe id="framepelayanan" src="user/informasi_ext/info_pelayanan.php" frameborder="0" class="w-[100%] h-screen"></iframe>
         </div>

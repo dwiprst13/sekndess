@@ -119,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
             ?>
                 <a href="?page=detail_artikel" class="card-galeri p-2 bg-[#0088CC] w-[100%] md:col-span-4 lg:col-span-4 rounded-lg lg:hover:bg-blue-600 lg:hover:scale-105 ease-in duration-500">
                     <h1 class="text-center pt-3 text-lg line-clamp-2"><?= $row_artikel['judul'] ?></h1>
-                    <img src="<?= $path_baru ?>" alt="" class="h-40 pt-3 w-28 w-full">
+                    <img src="<?= $path_baru ?>" alt="" class="lg:h-40 pt-3 w-full">
                     <p class="text-justify pt-3 line-clamp-3"><?= $row_artikel['content'] ?></p>
                 </a>
             <?php
@@ -150,7 +150,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
             ?>
                 <a href="?page=detail_galeri&id_doc=<?= $row_galeri['id_doc'] ?>" class="card-galeri p-2 bg-[#0088CC] w-[100%] text-white md:col-span-4 lg:col-span-4 rounded-lg lg:hover:bg-blue-600 lg:hover:scale-105 ease-in duration-500">
                     <h1 class="text-center pt-3 text-lg"><b><?= $row_galeri['judul'] ?></b></h1>
-                    <img src="<?= $path_baru ?> " alt="" class="h-40 pt-3 w-[100%]">
+                    <img src="<?= $path_baru ?> " alt="" class="lg:h-40 pt-3 w-[100%]">
                     <p class="text-justify text-sm pt-3 line-clamp-3"><?= $row_galeri['deskripsi'] ?></p>
                 </a>
             <?php
@@ -184,13 +184,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
     <!-- Summary -->
     <section class="lapor w-[100%] md:w-[85%] lg:w-[80%] mx-auto">
         <div class=" container bg-[#0088CC] rounded-lg grid mx-auto w-[90%] md:w-[85%] lg:w-[80%] px-4 py-16 md:grid-cols-8 lg:grid-cols-12 gap-3">
-            <div class="grid md:col-span-3 lg:col-span-4 min-h-56 flex text-center text-white place-content-center">
+            <div class="grid md:col-span-3 lg:col-span-4 lg:min-h-56 flex text-center text-white place-content-center">
                 <div class="place-self-center">
                     <h2>DESA TERPADU</h2>
                     <h1 class="text-3xl font-bold">DESA WIJIMULYO</h1>
                 </div>
             </div>
-            <div class="grid md:col-span-2 lg:col-span-4 min-h-56 text-center text-white">
+            <div class="grid md:col-span-2 lg:col-span-4 lg:min-h-56 text-center text-white">
                 <p class="place-self-center">Desa Wijimulyo, Nanggulan, Kulon Progo, Daerah Istimewa Yogyakarta</p>
             </div>
             <div class="grid md:col-span-3 lg:col-span-4 text-white">

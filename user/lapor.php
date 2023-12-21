@@ -80,6 +80,13 @@ if(!empty($userInfo)){ ?>
         <div class="container flex flex-col  w-[100%] md:w-[75%] lg:w-[55%] gap-5 columns-3 mx-auto grid px-4 py-10 lg:grid-cols-12">
             <?php
             while ($row_aduan = mysqli_fetch_assoc($queryAduan)) {
+                if ($row_aduan['status'] == 'dalam_antrian') {
+                    $status = 'Dalam Antrian';
+                } elseif ($row_aduan['status'] == 'diproses') {
+                    $status = 'Diproses';
+                } else {
+                    $status = 'Selesai';
+                }
             ?>
                 <div class="card-galeri justify-center p-2 text-gray-900 md:col-span-6 lg:col-span-6 rounded-lg border border-gray-900">
                     <div class="grid grid-cols-12 ">
@@ -87,10 +94,10 @@ if(!empty($userInfo)){ ?>
                             <img src="<?= $row_aduan['foto'] ?>" alt="foto_aduan" class="max-h-32 mx-auto ">
                         </div>    
                         <div class="col-span-8 pl-3 justify-between">
-                            <p class="text-lg"><b><?= $row_aduan['judul_keluhan'] ?></b></p>
-                            <p class="text-justify text-base line-clamp-3"><?= $row_aduan['keluhan'] ?></p>
+                            <p class="text-lg line-clamp-1"><b><?= $row_aduan['judul_keluhan'] ?></b></p>
+                            <p class="text-justify text-base line-clamp-2"><?= $row_aduan['keluhan'] ?></p>
                             <p class="text-justify text-xs"><?= $row_aduan['tanggal_masukkan']?></p>
-                            <p class="text-sm"><?= $row_aduan['status'] ?></p>
+                            <p class="text-sm"><?= $status ?></p>
                         </div>
                     </div>
                 </div>
