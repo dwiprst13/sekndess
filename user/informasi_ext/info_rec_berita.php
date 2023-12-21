@@ -1,3 +1,0 @@
-<p>
-    INI HALAMAN REKOMENDASI BERITA h
-</p>

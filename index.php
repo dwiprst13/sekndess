@@ -29,8 +29,6 @@ function tampilkanNavbar($userInfo, $data_user_login)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -190,16 +188,16 @@ function tampilkanNavbar($userInfo, $data_user_login)
                     <h4 class="text-3xl py-5 md:py-2 fonat-semibold text-center md:text-left text-white">Pemerintah Desa Wijimulyo</h4>
                     <h5 class="text-lg mt-0 py-5 md:py-2 text-center md:text-left text-white">Ikuti Kami di Media Sosial</h5>
                     <div class="mt-6 flex justify-center md:justify-start lg:mb-0 mb-6">
-                        <button onclick="window.location.href='https://www.twitter.com'" class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                        <button onclick="window.location.href='https://www.twitter.com'" class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none hover:bg-orange-300 hover:scale-105 duration-500 focus:outline-none mr-2" type="button">
                             <i class="fab fa-twitter"></i>
                         </button>
-                        <button onclick="window.location.href='https://www.facebook.com/profile.php?id=100049707712124'" class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                        <button onclick="window.location.href='https://www.facebook.com/profile.php?id=100049707712124'" class="bg-white hover:bg-orange-400 hover:scale-105 duration-500 text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                             <i class="fab fa-facebook-square"></i>
                         </button>
-                        <button onclick="window.location.href='https://wa.me/6285229992286'" class="bg-white text-green-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                        <button onclick="window.location.href='https://wa.me/6285229992286'" class="bg-white hover:bg-orange-400 duration-500 hover:scale-105 text-green-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                             <i class="fab fa-whatsapp"></i>
                         </button>
-                        <button onclick="window.location.href='https://www.instagram.com/prastttt13'" class="bg-white text-pink-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                        <button onclick="window.location.href='https://www.instagram.com/prastttt13'" class="bg-white hover:bg-orange-400 hover:scale-105 duration-500 text-pink-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button" target="_blank">
                             <i class="fab fa-instagram"></i>
                         </button>
                     </div>

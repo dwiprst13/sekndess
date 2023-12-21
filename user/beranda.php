@@ -47,34 +47,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
 
 <body chrome-hide-address-bar class="">
     <!-- Banner -->
-    <section class=" w-[100%] md:w-[85%] lg:w-[80%] bg-fixed mx-auto bg-cover bg-center bg-opacity-50" style="background-image: url('user/bg-hero.jpeg');">
-        <div class="grid h-screen w-[90%] md:w-[85%] lg:w-[80%] px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12">
-            <div class="mr-auto place-self-center lg:col-span-7">
-                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl xl:text-6xl">WEB TERPADU DESA WIJIMULYO</h1>
-                <p class="max-w-2xl mb-6 font-light text-white lg:mb-8 md:text-lg lg:text-xl ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos iste esse illo sapiente repellat labore voluptatum magni eligendi rerum hic placeat consequatur ab architecto neque, optio obcaecati. Sequi, fuga adipisci.</p>
-                <a href="#visi-misi" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white dark:text-white rounded-full bg-[#0088CC] hover:bg-orange-500 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 duration-500">
-                    Jelajahi
-                    <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                    </svg>
-                </a>
+    <div class=" w-[100%] bg-fixed mx-auto bg-cover bg-center " style="background-image: url('asset/bg-hero.jpeg');">
+        <div class="bg-gray-900 bg-opacity-50">
+            <div class="md:w-[85%] lg:w-[80%] flex mx-auto ">
+                <div class="grid h-screen w-[90%] md:w-[85%] lg:w-[80%] text-white px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12">
+                    <div class="mr-auto place-self-center lg:col-span-7">
+                        <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">WEB TERPADU DESA WIJIMULYO</h1>
+                        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos iste esse illo sapiente repellat labore voluptatum magni eligendi rerum hic placeat consequatur ab architecto neque, optio obcaecati. Sequi, fuga adipisci.</p>
+                        <a href="#visi-misi" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white dark:text-white rounded-full bg-[#0088CC] hover:bg-orange-500 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 duration-500 drop-shadow-lg">
+                            Jelajahi
+                            <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
 
-                <?php if (!empty($userInfo)) { ?>
-                    <a href="?page=lapor" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-[#0088CC] rounded-full hover:bg-orange-500 focus:ring-4 focus:ring-gray-100 dark:text-white dark:focus:ring-gray-800 duration-500">
-                        Lapor
-                    </a>
-                <?php } else { ?>
-                    <a href="login.php" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-[#0088CC] rounded-full hover:bg-orange-500 focus:ring-4 focus:ring-gray-100 dark:text-white dark:focus:ring-gray-800 duration-500">
-                        Lapor
-                    </a>
-                <?php } ?>
+                        <?php if (!empty($userInfo)) { ?>
+                            <a href="?page=lapor" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-[#0088CC] rounded-full hover:bg-orange-500 focus:ring-4 focus:ring-gray-100 dark:text-white dark:focus:ring-gray-800 duration-500 drop-shadow-lg">
+                                Lapor
+                            </a>
+                        <?php } else { ?>
+                            <a href="login.php" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-[#0088CC] rounded-full hover:bg-orange-500 focus:ring-4 focus:ring-gray-100 dark:text-white dark:focus:ring-gray-800 duration-500 drop-shadow-lg">
+                                Lapor
+                            </a>
+                        <?php } ?>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
     <!-- Jadwal Buka -->
     <section class="w-[100%] md:w-[85%] lg:w-[80%] mx-auto">
         <div class=" mx-auto w-[90%] md:w-[85%] py-16 lg:w-[80%] justify-center">
-            <div class="p-5 w-[100%] bg-[#0088CC] rounded-lg text-center text-white">
+            <div class="p-5 w-[100%] bg-[#0088CC] rounded-lg text-center text-white drop-shadow-xl">
                 <p class="text-xl p-3">Jadwal Buka</p>
                 <p class="text-base p-3">Sekarang Hari <span id="hari"></span></p>
                 <p class="text-base p-3">Pelayanan <span id="status"></span></p>
@@ -185,6 +189,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
             <a class="decoration-none bg-[#0088CC] w-40 text-center text-white p-1 rounded-lg hover:shadow-md  " href="?page=galeri">Selengkapnya</a>
         </div>
     </section>
+    <!--  Maps  -->
     <section class=" pb-20 w-[100%] md:w-[85%] lg:w-[80%] mx-auto">
         <div class="container grid mx-auto text-center  w-[80%]">
             <h1 class="text-2xl text-black font-bold mx-auto ">LOKASI</h1>
@@ -207,18 +212,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
     <!-- Summary -->
     <section class="lapor w-[100%] md:w-[85%] lg:w-[80%] mx-auto">
         <div class=" container bg-[#0088CC] rounded-lg grid mx-auto w-[90%] md:w-[85%] lg:w-[80%] px-4 py-16 md:grid-cols-8 lg:grid-cols-12 gap-3">
-            <!-- <div class="hidden lg:inline-block"></div> -->
-            <div class="md:col-span-3 lg:col-span-4 min-h-72 text-center object-center text-white place-self-center">
-                <h2>DESA TERPADU
-                </h2>
-                <h1 class="text-3xl font-bold">DESA WIJIMULYO</h1>
+            <div class="grid md:col-span-3 lg:col-span-4 min-h-56 flex text-center text-white place-content-center">
+                <div class="place-self-center">
+                    <h2>DESA TERPADU</h2>
+                    <h1 class="text-3xl font-bold">DESA WIJIMULYO</h1>
+                </div>
             </div>
-            <div class=" md:col-span-2 lg:col-span-4 min-h-72 text-center text-white place-self-center">
-                <p>Desa Wijimulyo, Nanggulan, Kulon Progo, Daerah Istimewa Yogyakarta</p>
+            <div class="grid md:col-span-2 lg:col-span-4 min-h-56 text-center text-white">
+                <p class="place-self-center">Desa Wijimulyo, Nanggulan, Kulon Progo, Daerah Istimewa Yogyakarta</p>
             </div>
             <div class="grid md:col-span-3 lg:col-span-4 text-white">
                 <?php if (!empty($userInfo)) { ?>
-                    <form class="py-8 space-y-6 mx-auto " action="" method="POST">
+                    <form class="py-8 space-y-6 mx-auto place-self-center" action="" method="POST">
                         <div class="w-[100%]">
                             <label for="judul" class="block text-sm text-white font-medium leading-6 ">Judul Keluhan</label>
                             <div class="mt-2">
@@ -235,7 +240,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
                             </div>
                     </form>
                 <?php } else { ?>
-                    <form class=" space-y-6 mx-auto" action="" method="POST">
+                    <form class=" space-y-6 mx-auto place-self-center" action="" method="POST">
                         <div class="w-[100%]">
                             <label for="email" class="block text-sm text-white font-medium leading-6 ">Email</label>
                             <div class="mt-2">
@@ -257,6 +262,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
             </div>
         </div>
     </section>
+
+
     <section>
         <div class="h-20  ">
             <p></p>
@@ -269,7 +276,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
         </div>
         <div class="flex w-[90%] md:w-[85%] lg:w-[80%] mx-auto px-4 py-16 overflow-x-auto hide-scroll-bar space-x-4 p-4">
             <!-- Card 1 -->
-            <div class="flex-shrink-0 w-64 p-2 bg-[#0088CC] rounded-lg shadow-md">
+            <div class="flex-shrink-0 w-64 p-2 bg-[#0088CC] rounded-lg shadow-md hover:scale-105 duration-500">
                 <img src="asset/pemerintah/gambar1.jpeg" alt="Gambar 1" class="w-full h-56 object-cover rounded-t-lg">
                 <div class="p-4 text-center text-white">
                     <h2 class="text-lg font-semibold">Saiful Romli</h2>
@@ -277,7 +284,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
                 </div>
             </div>
             <!-- Card 2 -->
-            <div class="flex-shrink-0 w-64 p-2 bg-[#0088CC] rounded-lg shadow-md">
+            <div class="flex-shrink-0 w-64 p-2 bg-[#0088CC] rounded-lg shadow-md hover:scale-105 duration-500">
                 <img src="asset/pemerintah/gambar2.jpeg" alt="Gambar 2" class="w-full h-56 object-cover rounded-t-lg">
                 <div class="p-4 text-center text-white">
                     <h2 class="text-lg font-semibold">Salma Mesias G</h2>
@@ -285,7 +292,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
                 </div>
             </div>
             <!-- Card 3 -->
-            <div class="flex-shrink-0 w-64 p-2 bg-[#0088CC] rounded-lg shadow-md">
+            <div class="flex-shrink-0 w-64 p-2 bg-[#0088CC] rounded-lg shadow-md hover:scale-105 duration-500">
                 <img src="asset/pemerintah/gambar3.jpeg" alt="Gambar 3" class="w-full h-56 object-cover rounded-t-lg">
                 <div class="p-4 text-center text-white">
                     <h2 class="text-lg font-semibold">Dwi Prasetia</h2>
@@ -293,7 +300,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
                 </div>
             </div>
             <!-- Card 4 -->
-            <div class="flex-shrink-0 w-64 p-2 bg-[#0088CC] rounded-lg shadow-md">
+            <div class="flex-shrink-0 w-64 p-2 bg-[#0088CC] rounded-lg shadow-md hover:scale-105 duration-500">
                 <img src="asset/pemerintah/gambar4.jpeg" alt="Gambar 4" class="w-full h-56 object-cover rounded-t-lg">
                 <div class="p-4 text-center text-white">
                     <h2 class="text-lg font-semibold">Sunanan Aulia Putri</h2>
@@ -301,7 +308,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
                 </div>
             </div>
             <!-- Card 5 -->
-            <div class="flex-shrink-0 w-64 p-2 bg-[#0088CC] rounded-lg shadow-md">
+            <div class="flex-shrink-0 w-64 p-2 bg-[#0088CC] rounded-lg shadow-md hover:scale-105 duration-500">
                 <img src="asset/pemerintah/gambar5.jpg" alt="Gambar 5" class="w-full h-56 object-cover rounded-t-lg">
                 <div class="p-4 text-center text-white">
                     <h2 class="text-lg font-semibold">Hendriansyah</h2>
@@ -309,7 +316,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
                 </div>
             </div>
             <!-- Card 5 -->
-            <div class="flex-shrink-0 w-64 p-2 bg-[#0088CC] rounded-lg shadow-md">
+            <div class="flex-shrink-0 w-64 p-2 bg-[#0088CC] rounded-lg shadow-md hover:scale-105 duration-500">
                 <img src="asset/pemerintah/gambar6.jpg" alt="Gambar 6" class="w-full h-56 object-cover rounded-t-lg">
                 <div class="p-4 text-center text-white">
                     <h2 class="text-lg font-semibold">M. Naufal S.Jk</h2>
@@ -317,7 +324,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
                 </div>
             </div>
             <!-- Card 5 -->
-            <div class="flex-shrink-0 w-64 p-2 bg-[#0088CC] rounded-lg shadow-md">
+            <div class="flex-shrink-0 w-64 p-2 bg-[#0088CC] rounded-lg shadow-md hover:scale-105 duration-500">
                 <img src="pemerintah/gambar7.jpg" alt="Gambar 7" class="w-full h-56 object-cover rounded-t-lg">
                 <div class="p-4 text-center text-white">
                     <h2 class="text-lg font-semibold">Alwan Rofail</h2>
@@ -329,7 +336,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
     <section class="  pb-20 w-[100%] md:w-[85%] lg:w-[80%] mx-auto">
         <div class="container bg-[#0088CC] text-white p-5 rounded-lg gap-5 grid w-[85%] mx-auto lg:grid-cols-5">
             <div class="flex text-center lg:col-span-2 w-[100%] h-[100%] rounded-lg">
-                <h3 class="place-self-center w-full text-2xl">Keuangan Desa</h3>
+                <h3 class="w-full text-2xl">Keuangan Desa</h3>
             </div>
             <div class="lg:col-span-3 ">
                 <div class="pb-5">
