@@ -103,34 +103,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
         </div>
     </section>
     <!-- Artikel -->
-    <section class=" w-[100%] md:w-[85%] lg:w-[80%] mx-auto ">
-        <div class="container grid mx-auto text-center ">
-            <h1 class="text-2xl text-black font-bold ">ARTIKEL</h1>
-        </div>
-        <div class="container grid text-white mx-auto px-4 py-16 w-[90%] md:w-[85%] lg:w-[80%] md:grid-cols-8 lg:grid-cols-12 gap-8">
-            <?php
-            $artikel = "SELECT * FROM artikel ORDER BY id_artikel ";
-            $queryArtikel = mysqli_query($conn, "SELECT * FROM artikel WHERE status = 'publish' ORDER BY id_artikel LIMIT 3");
-            ?>
-            <?php
-            while ($row_artikel = mysqli_fetch_assoc($queryArtikel)) {
-                $path_relatif = $row_artikel['gambar'];
-                $path_baru = str_replace('../../', '', $path_relatif);
-            ?>
-                <a href="?page=detail_artikel" class="card-galeri p-2 bg-[#0088CC] w-[100%] md:col-span-4 lg:col-span-4 rounded-lg lg:hover:bg-blue-600 lg:hover:scale-105 ease-in duration-500">
-                    <h1 class="text-center pt-3 text-lg"><?= $row_artikel['judul'] ?></h1>
-                    <img src="<?= $path_baru ?>" alt="" class="h-52 pt-3 w-28 w-full">
-                    <p class="text-justify pt-3 line-clamp-3"><?= $row_artikel['content'] ?></p>
-                </a>
-            <?php
-            }
-            ?>
-        </div>
-        </div>
-        <div class="flex justify-center pb-16 mx-auto w-[90%] md:w-[85%] lg:w-[80%]">
-            <a class="decoration-none bg-[#0088CC] w-40 text-center text-white p-1 rounded-lg hover:shadow-md  " href="?page=artikel">Selengkapnya</a>
-        </div>
-    </section>
     <section class=" w-[100%]  md:w-[85%] lg:w-[80%] mx-auto ">
         <div class="container grid mx-auto text-center ">
             <h1 class="text-2xl text-black font-bold ">ARTIKEL</h1>
@@ -146,8 +118,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
                 $path_baru = str_replace('../../', '', $path_relatif);
             ?>
                 <a href="?page=detail_artikel" class="card-galeri p-2 bg-[#0088CC] w-[100%] md:col-span-4 lg:col-span-4 rounded-lg lg:hover:bg-blue-600 lg:hover:scale-105 ease-in duration-500">
-                    <h1 class="text-center pt-3 text-lg"><?= $row_artikel['judul'] ?></h1>
-                    <img src="<?= $path_baru ?>" alt="" class="h-52 pt-3 w-28 w-full">
+                    <h1 class="text-center pt-3 text-lg line-clamp-2"><?= $row_artikel['judul'] ?></h1>
+                    <img src="<?= $path_baru ?>" alt="" class="h-40 pt-3 w-28 w-full">
                     <p class="text-justify pt-3 line-clamp-3"><?= $row_artikel['content'] ?></p>
                 </a>
             <?php
@@ -155,8 +127,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
             ?>
         </div>
         </div>
-        <div class="flex justify-center pb-16 mx-auto w-[90%] md:w-[85%] lg:w-[80%]">
-            <a class="decoration-none bg-[#0088CC] w-40 text-center text-white p-1 rounded-lg hover:shadow-md  " href="?page=artikel">Selengkapnya</a>
+        <div class="flex justify-center pb-16 mx-auto w-[90%] md:w-[85%] lg:w-[80%] ">
+            <a class="decoration-none bg-[#0088CC] hover:bg-orange-500 duration-500 w-40 text-center text-white p-1 rounded-lg hover:shadow-md  " href="?page=artikel">Selengkapnya</a>
         </div>
     </section>
     <!-- Galeri -->
@@ -186,7 +158,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
             ?>
         </div>
         <div class="flex justify-center pb-16 mx-auto w-[90%] md:w-[85%] lg:w-[80%]">
-            <a class="decoration-none bg-[#0088CC] w-40 text-center text-white p-1 rounded-lg hover:shadow-md  " href="?page=galeri">Selengkapnya</a>
+            <a class="decoration-none bg-[#0088CC] hover:bg-orange-500 duration-500 w-40 text-center text-white p-1 rounded-lg hover:shadow-md  " href="?page=galeri">Selengkapnya</a>
         </div>
     </section>
     <!--  Maps  -->
