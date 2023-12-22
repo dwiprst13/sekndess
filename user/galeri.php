@@ -20,7 +20,7 @@
                     ?>
                     <button id="detailGambar" href="?page=detail_galeri&id_doc=<?= $row_galeri['id_doc'] ?>" class="card-galeri p-1 bg-[#0088CC] w-[100%] text-white md:col-span-4 lg:col-span-4 rounded-lg lg:hover:bg-blue-600 lg:hover:scale-105 ease-in duration-500">
                         <h1 class="text-center pt-2 text-lg"><b><?= $row_galeri['judul'] ?></b></h1>
-                        <img src="<?= $path_baru?> " alt="" class="h-48 pt-2 w-[100%]">
+                        <img src="<?= $path_baru?> " alt="" class="h-60 pt-2 w-[100%]">
                         <p class="text-center text-sm pt-2 line-clamp-3"><?= $row_galeri['deskripsi'] ?></p>
                     </button>
                     <?php

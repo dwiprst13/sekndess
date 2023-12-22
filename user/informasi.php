@@ -10,7 +10,7 @@
 <div class="w-[95%] lg:w-[85%] mx-auto py-8 ">
     <div class="lg:grid lg:grid-cols-12 lg:gap-5">
         <div class="flex lg:col-span-2 lg:flex lg:flex-col my-5">
-            <div class="bg-white rounded shadow-md grid grid-cols-8 gap-1">
+            <div class="bg-white rounded shadow-md grid grid-cols-8 lg:flex lg:flex-col gap-1">
                 <button id="in_berita" class="text-center bg-blue-500 hover:bg-gray-700 text-white font-bold p-1 w-full rounded my-2 col-span-2">Berita</button>
                 <button id="in_agenda" class="text-center bg-green-500 hover:bg-gray-700 text-white font-bold p-1 w-full rounded my-2 col-span-2">Agenda</button>
                 <button id="in_pengumuman" class="text-center bg-yellow-500 hover:bg-gray-700 text-white font-bold p-1 w-full rounded my-2 col-span-2">Pengumuman</button>
