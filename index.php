@@ -14,11 +14,12 @@ function tampilkanNavbar($userInfo, $data_user_login)
     <?php
     } else {
     ?> <!-- Jika Tidak -->
-        <button id="loginBtn">
+        <button id="loginBtn" onclick="tampilkanModal('myAkun.php')">
             <img src='asset/img/user/nonlogin.jpg' alt='foto' class='w-8 h-8 p-1 rounded-full border border-1'>
         </button>
 <?php }
 }
+
 ?>
 
 <!doctype html>
@@ -84,6 +85,8 @@ function tampilkanNavbar($userInfo, $data_user_login)
                 <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-xl  text-white cursor-pointer lg:hidden"></ion-icon>
             </div>
 
+            <div id="modalContainer"></div>
+
             <!-- MODAL KONFIRMASI LOGOUT -->
             <div id="myModal" class="fixed top-0 left-0 hidden w-full h-screen overflow-y-auto bg-black bg-opacity-50">
                 <div class="flex items-center justify-center min-h-screen">
@@ -97,6 +100,75 @@ function tampilkanNavbar($userInfo, $data_user_login)
                 </div>
             </div>
 
+            <!-- Modal Ubah Foto Profil -->
+
+            <div id="fotoProfil" class="fixed hidden top-0 left-0 w-full h-screen overflow-y-auto bg-black bg-opacity-20">
+                <div class="flex items-center justify-center min-h-screen">
+                    <div class="border border-gray-500 w-[90%] md:w-4/12 shadow shadow-lg bg-white opacity-100 rounded-lg shadow-lg p-8">
+                        <div>
+                            <img src='asset/img/user/login-default.jpg' alt='foto' class=''>
+                        </div>
+                        <div class="flex justify-center text-white mx-10 justify-between">
+                            <button id="gantiFotoBtn" class="bg-blue-500 rounded-lg p-2 mt-5">Ubah Foto</button>
+                            <button id="keluarFotoBtn" class="bg-red-700 rounded-lg p-2 mt-5">Kembali</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Ubah Biodata -->
+
+            <div id="ubahData" class="fixed hidden top-0 left-0 w-full h-screen overflow-y-auto bg-black bg-opacity-20">
+                <div class="flex items-center justify-center min-h-screen">
+                    <div class="border border-gray-500 w-[90%] md:w-4/12 shadow shadow-lg bg-white opacity-100 rounded-lg shadow-lg p-8">
+                        <div class="flex justify-end">
+                            <button id="closeModalUbahData" class="text-xl rounded-full text-red-500 outline-none border-none">
+                                <span class="material-symbols-outlined mx-auto">
+                                    close
+                                </span>
+                            </button>
+                        </div>
+                        <form class="space-y-6 " action="#" method="POST">
+                            <div class=" ">
+                                <label for="name" class="block text-sm font-medium leading-6  ">Nama</label>
+                                <div class="mt-2">
+                                    <input id="name" name="name" type="text" autocomplete="off" required class="block w-full rounded-md  p-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" value="<?= $data_user_login['name'] ?>">
+                                </div>
+                            </div>
+                            <div class=" ">
+                                <label for="email" class="block text-sm font-medium leading-6">Email</label>
+                                <div class="mt-2">
+                                    <input id="email" name="email" type="email" autocomplete="off" required class="block w-full rounded-md  p-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" value="<?= $data_user_login['email'] ?>">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium leading-6">Nomor Telepon</label>
+                                <div class="mt-2">
+                                    <input id="phone" name="phone" type="phone" autocomplete="off" required class="block w-full rounded-md  p-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" value="<?= $data_user_login['phone'] ?>">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="nik" class="block text-sm font-medium leading-6">NIK</label>
+                                <div class="mt-2">
+                                    <input id="nik" name="nik" type="text" autocomplete="off" required class="block w-full rounded-md  p-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" value="<?= $data_user_login['nik'] ?>">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="pedukuhan" class="block text-sm font-medium leading-6">Pedukuhan</label>
+                                <div class="mt-2">
+                                    <input id="pedukuhan" name="pedukuhan" type="text" autocomplete="off" required class="block w-full rounded-md  p-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" value="<?= $data_user_login['pedukuhan'] ?>">
+                                </div>
+                            </div>
+                            <div class="">
+                                <button id="perbaruiData" type="submit" action="#" name="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6  shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 text-white">Perbarui</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Akun Info -->
+
             <div id="myAkun" class="fixed hidden top-0 left-0 w-full h-screen overflow-y-auto bg-black bg-opacity-20">
                 <div class="flex items-center justify-center min-h-screen">
                     <div class="border border-gray-500 w-[90%] md:w-4/12 shadow shadow-lg bg-white opacity-100 rounded-lg shadow-lg p-8">
@@ -108,14 +180,17 @@ function tampilkanNavbar($userInfo, $data_user_login)
                             </button>
                         </div>
                         <div class="p-3 w-[30%] mx-auto md:w-[40%] lg:w-[45%]">
-                            <?php
-                            $gambar = $data_user_login['photos'];
-                            if ($gambar && file_exists("../assets/img/$gambar")) {
-                                echo "<img src='../assets/img/$gambar' alt='foto' class='w-full h-auto rounded-full'>";
-                            } else {
-                                echo "<img src='asset/img/user/login-default.jpg' alt='foto' class='w-full h-auto rounded-full'>";
-                            }
-                            ?>
+                            <button id="fotoProfilBtn" class="rounded-full">
+                                <?php
+                                $gambar = $data_user_login['photos'];
+                                if ($gambar && file_exists("../assets/img/$gambar")) {
+                                    echo "<img src='../assets/img/$gambar' alt='foto' class='w-full h-auto rounded-full'>";
+                                } else {
+                                    echo "<img id='fotoProfil' src='asset/img/user/login-default.jpg' alt='foto' class='w-full h-auto rounded-full'>";
+                                }
+                                ?>
+                            </button>
+
                         </div>
                         <div class="p-3 text-black text-center text-2xl">
                             <p><?= $data_user_login['name'] ?></p>
@@ -130,7 +205,7 @@ function tampilkanNavbar($userInfo, $data_user_login)
                             <p><?= $data_user_login['pedukuhan'] ?></p>
                         </div>
                         <div class="p-3 gap-6 grid grid-cols-2 w-[100%] lg:w-[80%] mx-auto justify-center ">
-                            <button class="bg-blue-500 col-span-1 p-2 text-white rounded-lg">
+                            <button id="editProfile" class="bg-blue-500 col-span-1 p-2 text-white rounded-lg">
                                 Edit Profile
                             </button>
                             <button id="logout" class="bg-red-500 col-span-1 p-2 text-white rounded-lg">
@@ -230,10 +305,21 @@ function tampilkanNavbar($userInfo, $data_user_login)
         }
 
         document.addEventListener("DOMContentLoaded", function() {
+            // id modal
             const myModal = document.getElementById("myModal");
             const myAkun = document.getElementById("myAkun");
+            const ubahData = document.getElementById("ubahData");
+            const fotoProfil = document.getElementById("fotoProfil");
+            // id Btn
+            const closeModalBtn = document.getElementById("closeModal");
             const logoutButton = document.getElementById("logout");
-            const akunButton = document.getElementById("akunBtn"); // Ubah ID ini menjadi sesuai dengan ID tombol akunBtn
+            const confirmLogoutBtn = document.getElementById("confirmLogout");
+            const akunButton = document.getElementById("akunBtn");
+            const fotoProfilBtn = document.getElementById("fotoProfilBtn");
+            const gantiFotoBtn = document.getElementById("gantiFotoBtn");
+            const keluarFotoBtn = document.getElementById("keluarFotoBtn")
+            const editProfile = document.getElementById("editProfile");
+            const closeModalUbahData = document.getElementById("closeModalUbahData");
 
             akunButton.addEventListener("click", function() {
                 myModal.classList.add("hidden");
@@ -245,14 +331,32 @@ function tampilkanNavbar($userInfo, $data_user_login)
                 myModal.classList.remove("hidden");
             });
 
-            const confirmLogoutBtn = document.getElementById("confirmLogout");
             confirmLogoutBtn.addEventListener("click", function() {
                 window.location.href = "logout.php";
             });
 
-            const closeModalBtn = document.getElementById("closeModal");
             closeModalBtn.addEventListener("click", function() {
                 myAkun.classList.add("hidden");
+            });
+
+            closeModalUbahData.addEventListener("click", function(){
+                ubahData.classList.add("hidden");
+                myAkun.classList.remove("hidden");
+            })
+
+            fotoProfilBtn.addEventListener("click", function() {
+                myAkun.classList.add("hidden");
+                fotoProfil.classList.remove("hidden");
+            });
+
+            editProfile.addEventListener("click", function() {
+                myAkun.classList.add("hidden");
+                ubahData.classList.remove("hidden");
+            });
+
+            keluarFotoBtn.addEventListener("click", function() {
+                myAkun.classList.remove("hidden");
+                fotoProfil.classList.add("hidden");
             });
 
             const cancelLogoutBtn = document.getElementById("cancelLogout");

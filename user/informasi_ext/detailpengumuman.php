@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="main.css">
     <!-- Gambar Tab -->
     <link rel="icon" type="image/x-icon" href="asset/pemerintah/gambar6.jpg">
-    
 </head>
 <header class="bg-blue-500 text-white text-center py-4 mb-4">
             <h1 class="text-3xl font-bold">Pengumuman Resmi</h1>

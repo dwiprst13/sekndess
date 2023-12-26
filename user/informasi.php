@@ -34,7 +34,7 @@
             <iframe id="framepelayanan" src="user/informasi_ext/info_pelayanan.php" frameborder="0" class="w-[100%] h-screen"></iframe>
         </div>
 
-        <div class="hidden lg:block lg:col-span-3 rounded-r-lg ">
+        <div class="col-span-3 rounded-r-lg flex justify-center">
             <div id="if_rec_berita" class="w-[100%] h-screen">
                 <header class="bg-blue-500 text-white text-center py-4 mb-4">
                     <h1 class="text-3L font-bold">Rekomendasi Berita Hangat</h1>
@@ -64,11 +64,10 @@
 
             <div id="if_rec_agenda" class="w-[100%] h-screen"></div>
             <div id="if_rec_pengumuman" src="user/informasi_ext/info_rec_pengumuman.php" frameborder="0" class="w-[100%] h-screen"></div>
-            <div id="if_rec_pelayanan" class="lg:col-span-7 h-min-full border border-solid border-gray-400 p-4 rounded-lg shadow-md w-[100%]">
+            <div id="if_rec_pelayanan" class="block col-span-12 h-min-full border border-solid border-gray-400 p-4 rounded-lg shadow-md">
                 <header class="bg-red-500 text-white text-center py-4">
                     <h1 class="text-2xl font-bold">PELAYANAN DESA</h1>
                 </header>
-
                 <section class="max-w-2xl mx-auto mt-8">
                     <ul>
                         <!-- Item pertama -->

@@ -1,4 +1,5 @@
 <?php
+
 $id_artikel = $_GET['id_artikel'];
 $artikel = "SELECT * FROM artikel WHERE id_artikel='$id_artikel'";
 $result = mysqli_query($conn, $artikel);

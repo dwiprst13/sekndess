@@ -95,9 +95,8 @@ if (isset($_POST["submit"])) {
                 <div class="">
                     <button type="submit" action="#" name="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6  shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 text-white">Daftar</button>
                 </div>
+            </form>
         </div>
-
-        </form>
     </div>
     <div class=" px-3 py-4 justify-between">
         <div class="sm:mx-auto sm:w-full">
@@ -107,5 +106,4 @@ if (isset($_POST["submit"])) {
             </p>
         </div>
     </div>
-
 </div>

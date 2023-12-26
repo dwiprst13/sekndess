@@ -117,7 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
                 $path_relatif = $row_artikel['gambar'];
                 $path_baru = str_replace('../../', '', $path_relatif);
             ?>
-                <a href="?page=detail_artikel" class="card-galeri p-2 bg-[#0088CC] w-[100%] md:col-span-4 lg:col-span-4 rounded-lg lg:hover:bg-blue-600 lg:hover:scale-105 ease-in duration-500">
+                <a href="?page=detail_artikel&id_artikel=<?= $row_artikel['id_artikel'] ?>" class="card-galeri p-2 bg-[#0088CC] w-[100%] md:col-span-4 lg:col-span-4 rounded-lg lg:hover:bg-blue-600 lg:hover:scale-105 ease-in duration-500">
                     <h1 class="text-center pt-3 text-lg line-clamp-2"><?= $row_artikel['judul'] ?></h1>
                     <img src="<?= $path_baru ?>" alt="" class="lg:h-40 pt-3 w-full">
                     <p class="text-justify pt-3 line-clamp-3"><?= $row_artikel['content'] ?></p>
@@ -305,40 +305,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
             </div>
         </div>
     </section>
-    <section class="  pb-20 w-[100%] md:w-[85%] lg:w-[80%] mx-auto">
+    <section id="keuangan" class="pb-20 w-[100%] md:w-[85%] lg:w-[80%] mx-auto">
         <div class="container bg-[#0088CC] text-white p-5 rounded-lg gap-5 grid w-[85%] mx-auto lg:grid-cols-5">
-            <div class="flex text-center lg:col-span-2 w-[100%] h-[100%] rounded-lg">
-                <h3 class="w-full text-2xl">Keuangan Desa</h3>
+            <div class="flex justify-center items-center text-center lg:col-span-2 w-[100%] h-[100%] rounded-lg">
+                <div>
+                    <h3 class="w-full text-2xl">Keuangan Desa</h3>
+                </div>
             </div>
             <div class="lg:col-span-3 ">
                 <div class="pb-5">
                     <div class="flex justify-between pb-3">
                         <p>Pendapatan</p>
-                        <p>98/100</p>
+                        <p>Rp 1.342.450.000 / Rp1.421.000.500</p>
                     </div>
-                    <div class="w-full bg-gray-200 rounded-full h-2.5">
-                        <div class="bg-green-500 h-2.5 rounded-full" style="width: 98%"></div>
-                    </div>
-                </div>
-                <div class="pb-5">
-                    <div class="flex justify-between pb-3">
-                        <p>Pengeluaran</p>
-                        <p>90/100</p>
-                    </div>
-                    <div class="w-full bg-gray-200 rounded-full h-2.5">
-                        <div class="bg-green-500 h-2.5 rounded-full" style="width: 90%"></div>
+                    <div class="h-3 relative max-w-xl rounded-full overflow-hidden">
+                        <div class="w-full h-full bg-gray-200 absolute"></div>
+                        <div id="barMasuk" class="h-full bg-green-500 relative w-[100%] rounded-full"></div>
                     </div>
                 </div>
                 <div class="pb-5">
                     <div class="flex justify-between pb-3">
-                        <p>Sisa</p>
-                        <p>10/100</p>
+                        <p>Belanja</p>
+                        <p>Rp 1.236.450.000 / Rp1.421.000.500</p>
                     </div>
-                    <div class="w-full bg-gray-200 rounded-full h-2.5">
-                        <div class="bg-green-500 h-2.5 rounded-full" style="width: 10%"></div>
+                    <div class="h-3 relative max-w-xl rounded-full overflow-hidden">
+                        <div class="w-full h-full bg-gray-200 absolute"></div>
+                        <div id="barKeluar" class="h-full bg-green-500 relative w-[90%] rounded-full"></div>
                     </div>
                 </div>
-
+                <div class="pb-5">
+                    <div class="flex justify-between pb-3">
+                        <p>Sisa Kas</p>
+                        <p>Rp 143.450.000 / Rp1.421.000.500</p>
+                    </div>
+                    <div class="h-3 relative max-w-xl rounded-full overflow-hidden">
+                        <div class="w-full h-full bg-gray-200 absolute"></div>
+                        <div id="barSisa" class="h-full bg-green-500 relative w-[10%] rounded-full"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -376,6 +380,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
             const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
             return days[day];
         }
-
         checkSchedule();
+
+        const barMasuk = document.getElementById('barMasuk');
+        const barKeluar = document.getElementById('barKeluar');
+        const barSisa = document.getElementById('barSisa');
+
+        function fillBar(element, percentage) {
+            let width = 0;
+            const fill = setInterval(frame, 10);
+
+            function frame() {
+                if (width >= percentage) {
+                    clearInterval(fill);
+                } else {
+                    width++;
+                    element.style.width = width + '%';
+                }
+            }
+        }
+
+        fillBar(barMasuk, 98);
+        fillBar(barKeluar, 90);
+        fillBar(barSisa, 10);
     </script>
