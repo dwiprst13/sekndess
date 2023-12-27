@@ -81,7 +81,12 @@ include '../../config.php';
                 </li>
             </ul>
             <span id="jam" class="text-white text-2xl mt-28 text-center bottom-0 bg-blue-500 rounded-lg"> </span>
-
+            <div class="flex items-center justify-center p-5">
+                
+                <button id="logoutBtn" class="p-2 bg-red-700 rounded-lg font-bold text-white">
+                    Logout
+                </button>
+            </div>
         </div>
         <main class="w-full md:w-[calc(100%-256px)] md:ml-64 bg-gray-50 min-h-screen transition-all main">
             <div class=" bg-gray-200 items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
@@ -176,9 +181,17 @@ include '../../config.php';
     </div>
 
     <script>
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            if (confirm('Apakah Anda yakin ingin logout?')) {
+                window.location.href = '../../logout.php';
+            } else {
+                window.location.href = '?page=dashboard';
+            }
+        });
+
         function confirmLogout() {
             if (confirm('Apakah Anda yakin ingin logout?')) {
-                window.location.href = '../../logout.php'; // Redirect ke halaman logout jika dikonfirmasi
+                window.location.href = '../../logout.php';
             }
         }
 

@@ -19,7 +19,30 @@ function tampilkanNavbar($userInfo, $data_user_login)
         </button>
 <?php }
 }
+if (isset($_POST["submit"])) {
+    $new_name = $_POST['name'];
+    $new_email = $_POST['email'];
+    $new_phone = $_POST['phone'];
+    $new_nik = $_POST['nik'];
+    $new_pedukuhan = $_POST['pedukuhan'];
 
+    $update_user = $conn->prepare("UPDATE user SET name=?, email=?, phone=?, nik=?, pedukuhan=? WHERE id_user=?");
+    $update_user->bind_param("ssssss", $new_name, $new_email, $new_phone, $new_nik, $new_pedukuhan, $userInfo);
+
+    if ($update_user->execute()) {
+        echo
+        "<script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('ubahData').classList.add('hidden');
+                document.getElementById('myAkun').classList.remove('hidden');
+            });
+        </script>";
+    } else {
+        echo "Error updating user: " . $conn->error;
+    }
+
+    $update_user->close();
+}
 ?>
 
 <!doctype html>
@@ -33,6 +56,7 @@ function tampilkanNavbar($userInfo, $data_user_login)
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
     <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
@@ -42,7 +66,7 @@ function tampilkanNavbar($userInfo, $data_user_login)
     <!-- My Asset -->
     <link rel="stylesheet" href="main.css">
     <!-- Gambar Tab -->
-    <link rel="icon" type="image/x-icon" href="asset/pemerintah/gambar6.jpg">
+    <link rel="icon" type="image/x-icon" href="asset/img/logo.png">
     <title>SekNdes</title>
     <style>
         .active {
@@ -53,10 +77,10 @@ function tampilkanNavbar($userInfo, $data_user_login)
 
 <body chrome-hide-address-bar class="font-[Poppins] bg-white">
     <!-- Navbar -->
-    <header class="bg-[#0088CC] sticky top-0 z-50 drop-shadow-lg">
+    <header class="bg-[#0088CC] sticky top-0 z-40 drop-shadow-lg">
         <nav class="flex justify-between items-center h-20 w-[85%] md:w-[80%] lg:w-[75%] z-50 mx-auto">
             <div>
-                <h1><a class="text-white text-2xl font-bold" href="#">SekNdes</a></h1>
+                <h1><a class="text-white text-2xl flex items-center gap-3" href="#"><img src="asset/img/logo.png" class="h-10 w-10" alt=""><span class="hidden md:block">Tamantirto</span></a></h1>
             </div>
             <div class="nav-links duration-500 bg-[#0088CC] lg:static absolute lg:min-h-fit min-h-[60vh] left-0 top-[-800%] lg:w-auto text-white w-full flex items-center px-5">
                 <ul id="menu" class="flex bg-[#0088CC] text-sm md:text-base lg:flex-row flex-col lg:items-center lg:gap-[4vw] gap-8">
@@ -85,8 +109,6 @@ function tampilkanNavbar($userInfo, $data_user_login)
                 <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-xl  text-white cursor-pointer lg:hidden"></ion-icon>
             </div>
 
-            <div id="modalContainer"></div>
-
             <!-- MODAL KONFIRMASI LOGOUT -->
             <div id="myModal" class="fixed top-0 left-0 hidden w-full h-screen overflow-y-auto bg-black bg-opacity-50">
                 <div class="flex items-center justify-center min-h-screen">
@@ -111,6 +133,21 @@ function tampilkanNavbar($userInfo, $data_user_login)
                         <div class="flex justify-center text-white mx-10 justify-between">
                             <button id="gantiFotoBtn" class="bg-blue-500 rounded-lg p-2 mt-5">Ubah Foto</button>
                             <button id="keluarFotoBtn" class="bg-red-700 rounded-lg p-2 mt-5">Kembali</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="fotoProfilForm" class="fixed hidden top-0 left-0 w-full h-screen overflow-y-auto bg-black bg-opacity-20">
+                <div class="flex items-center justify-center min-h-screen">
+                    <div class="border border-gray-500 w-[90%] md:w-4/12 shadow shadow-lg bg-white opacity-100 rounded-lg shadow-lg p-8">
+                        <div id="tampilFoto">
+                            <img src='asset/img/user/login-default.jpg' alt='foto' class=''>
+                        </div>
+                        <div class="flex justify-center text-white mx-10 justify-between">
+
+                            <button id="konfirmasiFotoBtn" class="bg-blue-500 rounded-lg p-2 mt-5">Konfirmasi</button>
+                            <button id="batalFotoBtn" class="bg-red-700 rounded-lg p-2 mt-5">Batal</button>
                         </div>
                     </div>
                 </div>
@@ -192,19 +229,19 @@ function tampilkanNavbar($userInfo, $data_user_login)
                             </button>
 
                         </div>
-                        <div class="p-3 text-black text-center text-2xl">
+                        <div class="p-2 text-black text-center text-2xl">
                             <p><?= $data_user_login['name'] ?></p>
                         </div>
-                        <div class="p-3 text-black text-center">
+                        <div class="p-2 text-black text-center">
                             <p><?= $data_user_login['email'] ?></p>
                         </div>
-                        <div class="p-3 text-black text-center">
+                        <div class="p-2 text-black text-center">
                             <p><?= $data_user_login['phone'] ?></p>
                         </div>
-                        <div class="p-3 text-black text-center">
+                        <div class="p-2 text-black text-center">
                             <p><?= $data_user_login['pedukuhan'] ?></p>
                         </div>
-                        <div class="p-3 gap-6 grid grid-cols-2 w-[100%] lg:w-[80%] mx-auto justify-center ">
+                        <div class="p-2 gap-6 grid grid-cols-2 w-[100%] lg:w-[80%] mx-auto justify-center ">
                             <button id="editProfile" class="bg-blue-500 col-span-1 p-2 text-white rounded-lg">
                                 Edit Profile
                             </button>
@@ -339,7 +376,7 @@ function tampilkanNavbar($userInfo, $data_user_login)
                 myAkun.classList.add("hidden");
             });
 
-            closeModalUbahData.addEventListener("click", function(){
+            closeModalUbahData.addEventListener("click", function() {
                 ubahData.classList.add("hidden");
                 myAkun.classList.remove("hidden");
             })
@@ -375,6 +412,41 @@ function tampilkanNavbar($userInfo, $data_user_login)
             const loginButton = document.getElementById("loginBtn");
             loginButton.addEventListener("click", function() {
                 window.location.href = "login.php";
+            });
+        });
+
+        $(document).ready(function() {
+            $('#pilihFotoInput').on('change', function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        $('#tampilFoto img').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            $('#konfirmasiFotoBtn').on('click', function() {
+                const file = $('#pilihFotoInput')[0].files[0];
+                if (file) {
+                    const formData = new FormData();
+                    formData.append('file', file);
+
+                    $.ajax({
+                        url: 'upload_foto.php', // Ganti dengan URL untuk upload
+                        type: 'POST',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(response) {
+                            console.log('Upload berhasil:', response);
+                        },
+                        error: function(xhr, status, error) {
+                            console.error('Error:', error);
+                        }
+                    });
+                }
             });
         });
     </script>

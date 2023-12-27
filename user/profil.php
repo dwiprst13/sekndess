@@ -19,7 +19,7 @@
                             <h1>Visi</h1>
                         </div>
                         <div>
-                            <p class="">"MENUJU TAMAN TIRTO YANG MANDIRI, BERMARTABAT, ADIL DAN SEJAHTERA DAN BARAHLAKUL KARIMAH"</p>
+                            <p class="">Menuju desa yang Unggul dan Sejahtera dengan menjungjung tinggi nilai kebersamaan, Keberagaman, dan Kesejahteraan bagi seluruh warga Desa Tamantirto.</p>
                         </div>
                     </div>
                     <div class="misi">
@@ -27,25 +27,55 @@
                             <h1>Misi</h1>
                         </div>
                         <div>
-                            <div class="list-decimal">
-                                <li>Menyelenggarakan pemerintah desa yang efisien, efektif, dan bersih dengan mengutamakan masyarakat.
-                                </li>
-                                <li>
-                                    Meningkatkan sumber - sumber pendanaan pemerintahan dan pembangunan desa.
-                                </li>
-                                <li>
-                                    Mengembangkan pemberdayaan masyarakat dan kemitraan dalam melaksanakan pembangunan desa.
-                                </li>
-                                <li>
-                                    Meningkatkan kualitas sumber daya manusia dalam pembangunan desa yang berkelanjutan.
-                                </li>
-                                <li>
-                                    Mengembangkan perekonomian desa.
-                                </li>
-                                <li>
-                                    Menciptakan rasa aman, tentram, dalam suasana kehidupan yang demokratis dan agamis.
-                                </li>
+                            <div class="grid-cols-12 flex gap-2">
+                                <div class="col-span-1">
+                                    1.
+                                </div>
+                                <div class="col-span-11">
+                                    Menyelenggarakan pemerintah desa yang efisien, efektif, dan bersih dengan mengutamakan masyarakat.
+                                </div>
                             </div>
+                            <div class="grid-cols-12 flex gap-2">
+                                <div class="col-span-1">
+                                    2.
+                                </div>
+                                <div class="col-span-11">
+                                    Meningkatkan sumber - sumber pendanaan pemerintahan dan pembangunan desa.
+                                </div>
+                            </div>
+                            <div class="grid-cols-12 flex gap-2">
+                                <div class="col-span-1">
+                                    3.
+                                </div>
+                                <div class="col-span-11">
+                                    Mengembangkan pemberdayaan masyarakat dan kemitraan dalam melaksanakan pembangunan desa.
+                                </div>
+                            </div>
+                            <div class="grid-cols-12 flex gap-2">
+                                <div class="col-span-1">
+                                    4.
+                                </div>
+                                <div class="col-span-11">
+                                    Meningkatkan kualitas sumber daya manusia dalam pembangunan desa yang berkelanjutan.
+                                </div>
+                            </div>
+                            <div class="grid-cols-12 flex gap-2">
+                                <div class="col-span-1">
+                                    5.
+                                </div>
+                                <div class="col-span-11">
+                                    Mengembangkan perekonomian desa.
+                                </div>
+                            </div>
+                            <div class="grid-cols-12 flex gap-2">
+                                <div class="col-span-1">
+                                    6.
+                                </div>
+                                <div class="col-span-11">
+                                    Menciptakan rasa aman, tentram, dalam suasana kehidupan yang demokratis dan agamis.
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>

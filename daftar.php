@@ -44,7 +44,7 @@ if (isset($_POST["submit"])) {
 <div>
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img class="mx-auto h-10 w-auto" src="" alt="Logo">
+            <img class="mx-auto h-10 w-auto" src="asset/img/logo.png" alt="Logo">
             <a class="mx-auto h-10 w-auto" href="https://www.flaticon.com/free-icons/user" title="user icons"></a>
             <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900 ">Masuk Ke Akun Anda</h2>
         </div>

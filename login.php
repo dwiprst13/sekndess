@@ -2,7 +2,7 @@
 require 'config.php'; //koneksi ke database
 ?>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         <?php
         if (isset($_POST["submit"])) {
             $email = $_POST["email"];
@@ -40,17 +40,16 @@ require 'config.php'; //koneksi ke database
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <title>SekNdes</title>
 </head>
+
 <body class="bg-white">
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img class="mx-auto h-10 w-auto" src="" alt="Logo">
-            <a class="mx-auto h-10 w-auto" 
-            href="https://www.flaticon.com/free-icons/user" title="user icons"></a>
+            <img class="mx-auto h-10 w-auto" src="asset/img/logo.png" alt="Logo">
+            <a class="mx-auto h-10 w-auto" href="https://www.flaticon.com/free-icons/user" title="user icons"></a>
             <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900 ">Masuk Ke Akun Anda</h2>
         </div>
         <div class="mt-10 sm:mx-auto  sm:w-full sm:max-w-sm">
@@ -58,7 +57,7 @@ require 'config.php'; //koneksi ke database
                 <div>
                     <label for="email" class="block text-sm font-medium leading-6 ">Email</label>
                     <div class="mt-2">
-                        <input id="email" name="email" type="email" placeholder="Email" autocomplete="off" required  class="block w-full rounded-md border-0 py-1.5 text-gray-900  p-3 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        <input id="email" name="email" type="email" placeholder="Email" autocomplete="off" required class="block w-full rounded-md border-0 py-1.5 text-gray-900  p-3 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                     </div>
                     <p id="errorEmail" class="hidden font-medium text-sm text-red-500 py-3">Alamat Email belum terdaftar</p>
                 </div>

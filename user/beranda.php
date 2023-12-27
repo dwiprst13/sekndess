@@ -47,13 +47,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
 
 <body chrome-hide-address-bar class="">
     <!-- Banner -->
-    <div class=" w-[100%] bg-fixed mx-auto bg-cover bg-center " style="background-image: url('asset/bg-hero.jpeg');">
+    <div class=" w-[100%] bg-fixed mx-auto bg-cover bg-center " style="background-image: url('asset/img/bannerfix.png');">
         <div class="bg-gray-900 bg-opacity-50">
             <div class="md:w-[85%] lg:w-[80%] flex mx-auto ">
                 <div class="grid h-screen w-[90%] md:w-[85%] lg:w-[80%] text-white px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12">
                     <div class="mr-auto place-self-center lg:col-span-7">
-                        <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">WEB TERPADU DESA WIJIMULYO</h1>
-                        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos iste esse illo sapiente repellat labore voluptatum magni eligendi rerum hic placeat consequatur ab architecto neque, optio obcaecati. Sequi, fuga adipisci.</p>
+                        <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">WEB TERPADU DESA TAMANTIRTO</h1>
+                        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl ">Selamat Datang di website resmi Desa Tamantirto ! Temukan pesona dan kehidupan kami di sini.</p>
                         <a href="#visi-misi" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white dark:text-white rounded-full bg-[#0088CC] hover:bg-orange-500 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 duration-500 drop-shadow-lg">
                             Jelajahi
                             <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
                 <p class="text-xl p-3">Jadwal Buka</p>
                 <p class="text-base p-3">Sekarang Hari <span id="hari"></span></p>
                 <p class="text-base p-3">Pelayanan <span id="status"></span></p>
-                <p class="text-base p-3"> Hari ini kami buka pukul 07.00 - 14.00 WIB</p>
+                <p class="text-base p-3">Hari ini kami buka pukul 07.00 - 14.00 WIB</p>
             </div>
         </div>
     </section>
@@ -92,13 +92,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
             <h1 class="text-2xl text-black font-bold ">VISI & MISI</h1>
         </div>
         <div class="container text-white flex grid mx-auto px-4 py-16 gap-8 w-[90%] md:w-[85%] lg:w-[80%] lg:grid-cols-12">
-            <div class="visi p-5 lg:col-span-6 bg-[#0088CC]  rounded-lg">
+            <div class="visi p-5 py-2 lg:col-span-6 bg-[#0088CC] rounded-lg">
                 <h1 class="text-center text-2xl font-bold pb-5">VISI</h1>
-                <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quae dolorum, sequi, adipisci debitis quos quasi corporis eum repellat voluptatum sed laudantium nam quod in voluptatibus ducimus neque praesentium voluptates!</p>
+                <div class="flex justify-center items-center lg:h-72">
+                    <div class="text-center">
+                        <p>"Menuju desa yang Unggul dan Sejahtera dengan menjungjung tinggi nilai kebersamaan, Keberagaman, dan Kesejahteraan bagi seluruh warga Desa Tamantirto."</p>
+                    </div>
+                </div>
             </div>
             <div class="misi p-5 lg:col-span-6 bg-[#0088CC] rounded-lg">
                 <h1 class="text-center text-2xl font-bold pb-5">MISI</h1>
-                <p class=" text-justify">Lorem ipsum dolor sit amet consec tetur, adipisicing elit. Eius cum eligendi nemo explicabo? Esse est aliquid eligendi. Dicta placeat consectetur in, maiores dolores, fugiat molestias aliquam eos atque sapiente deserunt.</p>
+                <div class="list-decimal text-justify">
+                    <li>Menyelenggarakan pemerintah desa yang efisien, efektif, dan bersih dengan mengutamakan masyarakat.
+                    </li>
+                    <br>
+                    <li>
+                        Meningkatkan sumber - sumber pendanaan pemerintahan dan pembangunan desa.
+                    </li>
+                    <br>
+                    <li>
+                        Mengembangkan pemberdayaan masyarakat dan kemitraan dalam melaksanakan pembangunan desa.
+                    </li>
+
+                </div>
             </div>
         </div>
     </section>
@@ -120,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
                 <a href="?page=detail_artikel&id_artikel=<?= $row_artikel['id_artikel'] ?>" class="card-galeri p-2 bg-[#0088CC] w-[100%] md:col-span-4 lg:col-span-4 rounded-lg lg:hover:bg-blue-600 lg:hover:scale-105 ease-in duration-500">
                     <h1 class="text-center pt-3 text-lg line-clamp-2"><?= $row_artikel['judul'] ?></h1>
                     <img src="<?= $path_baru ?>" alt="" class="lg:h-40 pt-3 w-full">
-                    <p class="text-justify pt-3 line-clamp-3"><?= $row_artikel['content'] ?></p>
+                    <p class="text-justify text-sm pt-3 line-clamp-3"><?= $row_artikel['content'] ?></p>
                 </a>
             <?php
             }
@@ -148,19 +164,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
                 $path_relatif = $row_galeri['documentasi'];
                 $path_baru = str_replace('../../', '', $path_relatif);
             ?>
-                <a href="?page=detail_galeri&id_doc=<?= $row_galeri['id_doc'] ?>" class="card-galeri p-2 bg-[#0088CC] w-[100%] text-white md:col-span-4 lg:col-span-4 rounded-lg lg:hover:bg-blue-600 lg:hover:scale-105 ease-in duration-500">
+                <button id="galeriDetail" class="card-galeri p-2 bg-[#0088CC] w-[100%] text-white md:col-span-4 lg:col-span-4 rounded-lg lg:hover:bg-blue-600 lg:hover:scale-105 ease-in duration-500">
                     <h1 class="text-center pt-3 text-lg"><b><?= $row_galeri['judul'] ?></b></h1>
                     <img src="<?= $path_baru ?> " alt="" class="lg:h-40 pt-3 w-[100%]">
                     <p class="text-justify text-sm pt-3 line-clamp-3"><?= $row_galeri['deskripsi'] ?></p>
-                </a>
+                </button>
             <?php
             }
             ?>
+        </div>
+        <div>
+            <div>
+                <img src="" alt="">
+            </div>
         </div>
         <div class="flex justify-center pb-16 mx-auto w-[90%] md:w-[85%] lg:w-[80%]">
             <a class="decoration-none bg-[#0088CC] hover:bg-orange-500 duration-500 w-40 text-center text-white p-1 rounded-lg hover:shadow-md  " href="?page=galeri">Selengkapnya</a>
         </div>
     </section>
+
+    <!-- Modal untuk menampilkan gambar -->
+
     <!--  Maps  -->
     <section class=" pb-20 w-[100%] md:w-[85%] lg:w-[80%] mx-auto">
         <div class="container grid mx-auto text-center  w-[80%]">
@@ -171,13 +195,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
             </div>
             <div class=" map-card p-2 rounded-lg bg-[#0088CC] md:col-span-4  lg:col-span-5 lg:rounded-lg">
                 <p class="text-center text-white p-5">Wilayah Desa</p>
-                <iframe class="w-full h-72 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.416309428627!2d110.32573231588937!3d-7.8191062495150225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7af7e2b2acea97%3A0xa3cb91d3e65407b2!2sUniversitas%20Alma%20Ata%20Yogyakarta!5e0!3m2!1sid!2sid!4v1700715283041!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <iframe class="w-full h-72 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24517.84034950514!2d110.31809587044016!3d-7.833023720266254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7af87492c69c15%3A0x5027a76e3568ae0!2sTamantirto%2C%20Kec.%20Kasihan%2C%20Kabupaten%20Bantul%2C%20Daerah%20Istimewa%20Yogyakarta!5e0!3m2!1sid!2sid!4v1703651609822!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class=" map-card p-2 rounded-lg bg-[#0088CC] md:col-span-4 lg:col-span-5 lg:rounded-lg">
                 <p class="text-center text-white p-5">Lokasi Kantor Desa</p>
-                <iframe class="w-full h-72 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.416309428627!2d110.32573231588937!3d-7.8191062495150225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7af7e2b2acea97%3A0xa3cb91d3e65407b2!2sUniversitas%20Alma%20Ata%20Yogyakarta!5e0!3m2!1sid!2sid!4v1700715283041!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <iframe class="w-full h-72 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.666303709292!2d110.32401287372619!3d-7.825099077717993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7af876eb1ff033%3A0xdb21a96c820377f5!2sKtr.%20Desa%20Tamantirto%2C%20Jetis%2C%20Tamantirto%2C%20Kec.%20Kasihan%2C%20Kabupaten%20Bantul%2C%20Daerah%20Istimewa%20Yogyakarta!5e0!3m2!1sid!2sid!4v1703651751368!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
@@ -306,25 +328,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
         </div>
     </section>
     <section id="keuangan" class="pb-20 w-[100%] md:w-[85%] lg:w-[80%] mx-auto">
-        <div class="container bg-[#0088CC] text-white p-5 rounded-lg gap-5 grid w-[85%] mx-auto lg:grid-cols-5">
+        <div class="container bg-[#0088CC] pb-5 text-white rounded-lg gap-5 grid w-[85%] mx-auto lg:grid-cols-5">
             <div class="flex justify-center items-center text-center lg:col-span-2 w-[100%] h-[100%] rounded-lg">
-                <div>
+                <div class="p-5">
                     <h3 class="w-full text-2xl">Keuangan Desa</h3>
                 </div>
             </div>
-            <div class="lg:col-span-3 ">
-                <div class="pb-5">
-                    <div class="flex justify-between pb-3">
-                        <p>Pendapatan</p>
-                        <p>Rp 1.342.450.000 / Rp1.421.000.500</p>
+            <div class="lg:col-span-3">
+                <div class="p-2 w-full">
+                    <div class="flex justify-between pb-3 text-sm md:text-base">
+                        <p>Pemasukan</p>
+                        <p>Rp 1.342.450.000 / Rp 1.421.000.500</p>
                     </div>
                     <div class="h-3 relative max-w-xl rounded-full overflow-hidden">
                         <div class="w-full h-full bg-gray-200 absolute"></div>
                         <div id="barMasuk" class="h-full bg-green-500 relative w-[100%] rounded-full"></div>
                     </div>
                 </div>
-                <div class="pb-5">
-                    <div class="flex justify-between pb-3">
+                <div class="p-2">
+                    <div class="flex justify-between pb-3 text-sm md:text-base">
                         <p>Belanja</p>
                         <p>Rp 1.236.450.000 / Rp1.421.000.500</p>
                     </div>
@@ -333,8 +355,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
                         <div id="barKeluar" class="h-full bg-green-500 relative w-[90%] rounded-full"></div>
                     </div>
                 </div>
-                <div class="pb-5">
-                    <div class="flex justify-between pb-3">
+                <div class="p-2">
+                    <div class="flex justify-between pb-3 text-sm md:text-base">
                         <p>Sisa Kas</p>
                         <p>Rp 143.450.000 / Rp1.421.000.500</p>
                     </div>
@@ -403,4 +425,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
         fillBar(barMasuk, 98);
         fillBar(barKeluar, 90);
         fillBar(barSisa, 10);
+
+        const galeriDetail = document.getElementById('galeriDetail');
+
+        const modalGambar = document.getElementById('modalGambar');
+        const gambarModal = document.getElementById('gambarModal');
+        const tutupModal = document.getElementById('tutupModal');
+
+        galeriDetail.addEventListener('click', function() {
+            const linkGambar = "<?= $path_baru ?>";
+            gambarModal.src = linkGambar;
+            modalGambar.classList.remove('hidden');
+        });
+
+        tutupModal.addEventListener('click', function() {
+            modalGambar.classList.add('hidden');
+        });
     </script>

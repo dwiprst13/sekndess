@@ -86,8 +86,7 @@ Kami dengan bangga mempersembahkan platform daring ini sebagai pusat informasi d
         <div class="container text-white flex grid mx-auto px-4 py-16 gap-8 w-[90%] md:w-[85%] lg:w-[80%] lg:grid-cols-12">
             <div class="visi p-5 lg:col-span-6 bg-[#0088CC]  rounded-lg" >
                 <h1 class="text-center text-2xl font-bold pb-5">VISI</h1>
-                <p class="text-center">Desa Maju Berbasis Budaya, Harmoni Alam, dan Kesejahteraan Bersama.
-</p>
+                <p class="text-center">Desa Maju Berbasis Budaya, Harmoni Alam, dan Kesejahteraan Bersama.</p>
             </div>
             <div class="misi p-5 lg:col-span-6 bg-[#0088CC] rounded-lg" >
                 <h1 class="text-center text-2xl font-bold pb-5">MISI</h1>
