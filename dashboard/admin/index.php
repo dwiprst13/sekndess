@@ -1,5 +1,9 @@
 <?php
 include '../../config.php';
+
+$userInfo = @$_SESSION['id_user_admin'];
+$q_data_user = mysqli_query($conn, "SELECT * FROM user WHERE id_user='$userInfo'");
+$data_user_login = mysqli_fetch_array($q_data_user);
 ?>
 
 <!DOCTYPE html>
@@ -81,8 +85,8 @@ include '../../config.php';
                 </li>
             </ul>
             <span id="jam" class="text-white text-2xl mt-28 text-center bottom-0 bg-blue-500 rounded-lg"> </span>
-            <div class="flex items-center justify-center p-5">
-                
+            <div class="text-center text-white font-bold text-xl pt-5"><?php echo $data_user_login['name']; ?></div>
+            <div class="flex items-center justify-center p-2">
                 <button id="logoutBtn" class="p-2 bg-red-700 rounded-lg font-bold text-white">
                     Logout
                 </button>
@@ -200,6 +204,8 @@ include '../../config.php';
             var jam = now.getHours();
             var menit = now.getMinutes();
             var detik = now.getSeconds();
+            jam = jam.toString().padStart(2, '0');
+            menit = menit.toString().padStart(2, '0');
             detik = detik.toString().padStart(2, '0');
 
             var waktu = jam + ":" + menit + ":" + detik;

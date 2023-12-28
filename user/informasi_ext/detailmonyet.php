@@ -23,11 +23,7 @@
 <body class="font-sans ">
 
 <header class="bg-purple-500 text-white text-center py-4">
-<a class="absolute top-0 left-0 m-4 p-2 bg-red-500 text-white rounded-full focus:outline-none focus:shadow-outline-red hover:bg-red-600" href="info_berita.php">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </a>
+
         <h1 class="text-3xl font-bold">Misteri : Pocong Ternyata Monyet</h1>
         
         <p class="text-sm">Oleh: Nama Penulis | Tanggal: 16 Desember 2023</p>
@@ -43,7 +39,7 @@
                 <p>"Ini benar-benar membuat kami terkejut. Kami tidak pernah menduga bahwa itu hanya seekor monyet yang tersesat. Sangat unik!"</p>
             </blockquote>
 <br>
-<img src="..\..\asset\img\pocong.jfif " alt="" class="h-75 w-auto">
+<img src="..\..\asset\img\informasi\pocong.jfif " alt="" class="h-75 w-auto">
             <p class="text-gray-600 mt-4">Masyarakat sekarang bisa bernapas lega, dan pocong yang sebelumnya dianggap sebagai pertanda mistis dianggap sebagai insiden yang lucu dan tidak biasa. Monyet tersebut sekarang dalam perawatan dan akan dikembalikan ke habitatnya setelah mendapat perawatan yang memadai.</p>
         </article>
     </section>

@@ -102,20 +102,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
             </div>
             <div class="misi p-5 lg:col-span-6 bg-[#0088CC] rounded-lg">
                 <h1 class="text-center text-2xl font-bold pb-5">MISI</h1>
-                <div class="list-decimal text-justify">
-                    <li>Menyelenggarakan pemerintah desa yang efisien, efektif, dan bersih dengan mengutamakan masyarakat.
-                    </li>
-                    <br>
-                    <li>
+                <div class="grid grid-cols-12">
+                    <div class="col-span-1">
+                        1.
+                    </div>
+                    <div class="col-span-11">
+                        Menyelenggarakan pemerintah desa yang efisien, efektif, dan bersih dengan mengutamakan masyarakat.
+                    </div>
+                </div>
+                <div class="grid grid-cols-12">
+                    <div class="col-span-1">
+                        2.
+                    </div>
+                    <div class="col-span-11">
                         Meningkatkan sumber - sumber pendanaan pemerintahan dan pembangunan desa.
-                    </li>
-                    <br>
-                    <li>
+                    </div>
+                </div>
+                <div class="grid grid-cols-12">
+                    <div class="col-span-1">
+                        3.
+                    </div>
+                    <div class="col-span-11">
                         Mengembangkan pemberdayaan masyarakat dan kemitraan dalam melaksanakan pembangunan desa.
-                    </li>
-
+                    </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
     <!-- Artikel -->
@@ -165,7 +177,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
                 $path_baru = str_replace('../../', '', $path_relatif);
             ?>
                 <button id="galeriDetail" class="card-galeri p-2 bg-[#0088CC] w-[100%] text-white md:col-span-4 lg:col-span-4 rounded-lg lg:hover:bg-blue-600 lg:hover:scale-105 ease-in duration-500">
-                    <h1 class="text-center pt-3 text-lg"><b><?= $row_galeri['judul'] ?></b></h1>
+                    <h1 class="text-center pt-3"><b><?= $row_galeri['judul'] ?></b></h1>
                     <img src="<?= $path_baru ?> " alt="" class="lg:h-40 pt-3 w-[100%]">
                     <p class="text-justify text-sm pt-3 line-clamp-3"><?= $row_galeri['deskripsi'] ?></p>
                 </button>
@@ -319,7 +331,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Mengklik tombol kirim keluhan
             </div>
             <!-- Card 5 -->
             <div class="flex-shrink-0 w-64 p-2 bg-[#0088CC] rounded-lg shadow-md hover:scale-105 duration-500">
-                <img src="pemerintah/gambar7.jpg" alt="Gambar 7" class="w-full h-56 object-cover rounded-t-lg">
+                <img src="asset/pemerintah/gambar7.jpg" alt="Gambar 7" class="w-full h-56 object-cover rounded-t-lg">
                 <div class="p-4 text-center text-white">
                     <h2 class="text-lg font-semibold">Alwan Rofail</h2>
                     <p class="">Kaki Kiri Desa</p>

@@ -112,12 +112,12 @@ if(!empty($userInfo)){ ?>
                 var reader = new FileReader();
                 reader.onload = function (e) { 
                     img.setAttribute("src", e.target.result);
-                    img.style.height = '150px'; // Set tinggi default
+                    img.style.height = '150px';
                 };
                 reader.readAsDataURL(input.files[0]); 
             } else {
-                img.removeAttribute("src"); // Hapus atribut src jika tidak ada file dipilih
-                img.style.height = 'auto'; // Set tinggi ke auto untuk menyesuaikan tinggi teks
+                img.removeAttribute("src");
+                img.style.height = 'auto'; 
             }
         }
         </script>

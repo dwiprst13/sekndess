@@ -41,7 +41,7 @@
                 <p>"Kami bekerja sama dengan berbagai pihak untuk memperbaiki situasi ini dengan cepat. Mohon maaf atas ketidaknyamanan yang mungkin timbul dari gangguan ini."</p>
             </blockquote>
             <br>
-            <img src="..\..\asset\img\jalan.jpg " alt="" class="h-75 w-auto">
+            <img src="..\..\asset\img\informasi\jalan.jpg " alt="" class="h-75 w-auto">
             <p class="text-gray-600 mt-4">Warga yang tinggal di sekitar wilayah tersebut diminta untuk tetap tenang dan mengikuti petunjuk arah dari petugas lalu lintas. Evakuasi darurat telah dilakukan di beberapa area yang terdampak, dan pihak berwenang terus memantau perkembangan situasi.</p>
         </article>
     </section>

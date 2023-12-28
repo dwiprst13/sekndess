@@ -131,7 +131,7 @@ if (isset($_POST["submit"])) {
                             <img src='asset/img/user/login-default.jpg' alt='foto' class=''>
                         </div>
                         <div class="flex justify-center text-white mx-10 justify-between">
-                            <button id="gantiFotoBtn" class="bg-blue-500 rounded-lg p-2 mt-5">Ubah Foto</button>
+                            <button id="gantiFotoBtn" class="bg-blue-500 rounded-lg p-2 mt-5"><a href="error/error_foto.html">Ubah Foto</a></button>
                             <button id="keluarFotoBtn" class="bg-red-700 rounded-lg p-2 mt-5">Kembali</button>
                         </div>
                     </div>
@@ -297,7 +297,7 @@ if (isset($_POST["submit"])) {
         <div class=" mx-auto px-4 w-[100%] md:w-[85%] lg:w-[80%]">
             <div class="flex flex-wrap text-left lg:text-left">
                 <div class="w-full lg:w-6/12 px-4 ">
-                    <h4 class="text-3xl py-5 md:py-2 fonat-semibold text-center md:text-left text-white">Pemerintah Desa Wijimulyo</h4>
+                    <h4 class="text-3xl py-5 md:py-2 fonat-semibold text-center md:text-left text-white">Pemerintah Desa Tamantirto</h4>
                     <h5 class="text-lg mt-0 py-5 md:py-2 text-center md:text-left text-white">Ikuti Kami di Media Sosial</h5>
                     <div class="mt-6 flex justify-center md:justify-start lg:mb-0 mb-6">
                         <button onclick="window.location.href='https://www.twitter.com'" class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none hover:bg-orange-300 hover:scale-105 duration-500 focus:outline-none mr-2" type="button">
@@ -317,7 +317,7 @@ if (isset($_POST["submit"])) {
                 <div class="w-full lg:w-6/12 px-4">
                     <div class="flex flex-wrap items-top mb-6">
                         <div class="w-full lg:w-6/12 px-4 ml-auto">
-                            <p class="text-white text-center md:text-left">Desa Wijimulyo Kecamatan Nanggulan Kabupaten Kulon Progo Provinsi D.I. Yogyakarta Kode Pos 55671</p>
+                            <p class="text-white text-center md:text-left">Desa Tamanirto Kecamatan Kasihan Kabupaten Bantul Provinsi D.I. Yogyakarta Kode Pos 55671</p>
                         </div>
                     </div>
                 </div>

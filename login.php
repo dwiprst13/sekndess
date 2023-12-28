@@ -65,7 +65,7 @@ require 'config.php'; //koneksi ke database
                     <div class="flex items-center justify-between">
                         <label for="password" class="block text-sm font-medium leading-6 ">Password</label>
                         <div class="text-sm">
-                            <a href="error.html" class="font-semibold text-indigo-600 hover:text-indigo-500">Lupa Kata Sandi</a>
+                            <a href="error/error_login.html" class="font-semibold text-indigo-600 hover:text-indigo-500">Lupa Kata Sandi</a>
                         </div>
                     </div>
                     <div class="mt-2">
