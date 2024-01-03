@@ -1,5 +1,5 @@
 # sekndesv4
-## Jangan ubah code php nya atau aku nangis
+## TUGAS PEMROGRAMAN WEB
 ## Step 1
 1. Instal XAMPP download di xampp.com
 2. Download Code.zip dari repositori ini
@@ -11,3 +11,5 @@
 8. Import sekndes_db.sql dari phpmyadmin
 9. Untuk menjalankan webnya ketik di browser localhost/sekndess/index.php
 10. Done!!!!
+
+Feel Free to Use For Everyone :)
